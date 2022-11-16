@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en_US">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="https://me.idealli.com/images/load.gif" data-src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+<meta name="theme-color" content="#222">
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('这是一篇加密的文章...密码是多少呢OvO') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="计数原理 问题背景：N个物体放到k个盒子中  排列组合公式：  \[C_n^m = \frac{n!}{m!(n-m)!}\] \[A_n^m = \frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\] \[A_n^n = n!\]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考完就不看の离散数学笔记！">
+<meta property="og:url" content="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/08/考完就不看の离散数学笔记！/index.html">
+<meta property="og:site_name" content="WHYの小窝">
+<meta property="og:description" content="计数原理 问题背景：N个物体放到k个盒子中  排列组合公式：  \[C_n^m = \frac{n!}{m!(n-m)!}\] \[A_n^m = \frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\] \[A_n^n = n!\]">
+<meta property="og:locale" content="en_US">
+<meta property="og:updated_time" content="2020-02-21T09:52:59.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="考完就不看の离散数学笔记！">
+<meta name="twitter:description" content="计数原理 问题背景：N个物体放到k个盒子中  排列组合公式：  \[C_n^m = \frac{n!}{m!(n-m)!}\] \[A_n^m = \frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\] \[A_n^n = n!\]">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/08/考完就不看の离散数学笔记！/">
+
+
+
+
+
+  <title>考完就不看の离散数学笔记！ | WHYの小窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2db1eb18d81341c69d3326b3f812f6e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en_US">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+   
+    <a href="https://github.com/creeper121386" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WHYの小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">今天也是美好的一天呢！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://github.com/creeper121386" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/08/考完就不看の离散数学笔记！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="why">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WHYの小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">考完就不看の离散数学笔记！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-08T17:49:42+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="计数原理">计数原理</h3>
+<h4 id="问题背景n个物体放到k个盒子中">问题背景：N个物体放到k个盒子中</h4>
+<ul>
+<li>排列组合公式：</li>
+</ul>
+<p><span class="math display">\[C_n^m = \frac{n!}{m!(n-m)!}\]</span></p>
+<p><span class="math display">\[A_n^m = \frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\]</span></p>
+<p><span class="math display">\[A_n^n = n!\]</span></p>
+<a id="more"></a>
+<ul>
+<li><strong>广义鸽巢原理:</strong> 如果<span class="math inline">\(N\)</span>个物体放置到<span class="math inline">\(k\)</span>个盒子中,那么至少有一个盒子装有不少于<span class="math inline">\(⌈{N\over k}⌉\)</span>个物体。
+<ul>
+<li>朋友敌人问题:假定有一组6个人,任两人非友即敌。证明存在三个人 彼此是朋友或者存在三人彼此是敌人。</li>
+<li>解: 任选其中一人A出来,剩下的5个人中,分成两个子集,一 个是A的朋友的集合,另一个是A的敌人的集合。这两个集合至 少有一个多于两个人。至少有3个人要么是A朋友,要么是A的敌 人。如果三个人是A的朋友,那么如果这三个人之间有一对是朋 友,则已;否则这三个人本身就是彼此为敌人。</li>
+</ul></li>
+<li><font color="#FDC92">★</font><strong>组合恒等式</strong>：</li>
+</ul>
+<p><span class="math display">\[C_n^k = \frac{k}{n} C_{n-1}^{k-1}\]</span></p>
+<p><span class="math display">\[Pascal: C_n^k = C^{k}_{n-1} + C_{n-1}^{k-1}\ \text{(杨辉三角中相邻两元素之和)}\]</span></p>
+<ul>
+<li><strong>有重复排列</strong>： <span class="math inline">\(n^k\)</span>种</li>
+<li><strong>有重复组合</strong>：把<span class="math inline">\(N\)</span>个相同的物体放到<span class="math inline">\(k\)</span>个不同盒子中，有<span class="math inline">\(C_{k+n-1}^n\)</span>中方法。相当于解不定方程：</li>
+</ul>
+<p><span class="math display">\[\sum_{i=0}^n x_i = k, x_i\in [0, r]\]</span></p>
+<ul>
+<li><font color="#FDC92">★</font><strong>分组问题</strong>：把<span class="math inline">\(N\)</span>个不同的物体放到<span class="math inline">\(k\)</span>个相同盒子中：
+<ul>
+<li>把 <span class="math inline">\(2n\)</span> 个人分成 <span class="math inline">\(n\)</span> 组,每组<span class="math inline">\(2\)</span>人,有多少分法?</li>
+<li>解: 相当于<span class="math inline">\(2n\)</span> 不同的球放到 <span class="math inline">\(n\)</span> 个相同的盒子,每个盒子<span class="math inline">\(2\)</span>个。可以先考虑<span class="math inline">\(n\)</span>个盒子是有标记有顺序的,分步处理:那么先选第一组<span class="math inline">\(2\)</span>个,再选第<span class="math inline">\(2\)</span>组<span class="math inline">\(2\)</span>个,如此类推,一共有<span class="math inline">\(C(2n,2)C(2n-2,2)...C(2,2)\)</span>. 这个数字包括了所有可能的组的排列方法。但实际上<span class="math inline">\(n\)</span>个盒子作为<span class="math inline">\(n\)</span>组本身是无序的,所以就应该将有序的分组数再除以<span class="math inline">\(n\)</span>个组的有序排列数<span class="math inline">\(n!\)</span>，因此结果为：</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[\frac{1}{n!}C(2n,2)C(2n-2,2)...C(2,2)\]</span></p>
+<ul>
+<li><strong>不相邻问题</strong>：从<span class="math inline">\(S={1, 2, ... , n}\)</span>中选择 k 个不相邻的数,有多少种方法?
+<ul>
+<li><span class="math inline">\(k\)</span>个数不相邻，相当于他们是剩下的<span class="math inline">\(n-k\)</span>个数的隔板，因此有<span class="math inline">\(c_{N-K+1}^K\)</span>种办法。</li>
+</ul></li>
+<li><strong>不可辨别对象排列</strong>：单词计数问题。把单词 <strong>SUCCESS</strong> 重新排列能得到多少不同的串?
+<ul>
+<li>单词长度固定为7，想象有7个位置，首先放入三个S，有<span class="math inline">\(C_7^3\)</span>种方法；再放入两个C，有<span class="math inline">\(C_4^2\)</span>种，再放入U和E，有<span class="math inline">\(A_2^2\)</span>种。乘起来即可。</li>
+<li>设<span class="math inline">\(n\)</span>个对象中，有类型<span class="math inline">\(i\)</span>的相同对象<span class="math inline">\(n_i\)</span>个，共有<span class="math inline">\(\frac{n!}{\prod n_i!}\)</span>种办法。</li>
+</ul></li>
+<li><strong>四个基本问题</strong>：
+<ol type="1">
+<li><strong>可辨别对象放入可辨别盒子</strong>：分步组合即可。</li>
+<li><strong>不可辨别对象放入可辨别盒子</strong>：分组问题。</li>
+<li><strong>可辨别对象放入不可辨别盒子</strong>：不作要求。</li>
+<li><strong>不可辨别对象放入不可辨别盒子</strong>：不作要求。</li>
+</ol></li>
+</ul>
+<h3 id="高级计数原理">高级计数原理</h3>
+<h4 id="常系数线性递推方程"><font color="#FDC92">★</font>常系数线性递推方程</h4>
+<ul>
+<li>齐次: 已知<span class="math inline">\(a_0, a_1, ...a_k \text{(初值)}, a_n = \sum_{i=1}^k c_ia_{n-i}\)</span>，<span class="math inline">\(c\)</span>均为常数
+<ul>
+<li>解特征方程：<span class="math inline">\(r^k-c_1r^{k-1}-c_2r^{k-2}-...c_{k-1}r-c_k=0\)</span>，即<span class="math inline">\(\sum_{i=0}^{k}-c_ir^{k-i}=0,c_0=-1 \ \ (1)\)</span>，则<span class="math inline">\(a_n= r^n\)</span></li>
+<li>例:<span class="math inline">\(a_n = a_{n-1}+ a_{n-2}\rightarrow r^2=r+1\)</span></li>
+<li><font color="#FDC92">★</font>如果<span class="math inline">\(a(n)\)</span>和<span class="math inline">\(b(n)\)</span>都是某常系数线性齐次解递推关系的解,那么<span class="math inline">\(a(n)\)</span>和<span class="math inline">\(b(n)\)</span>的任一线性组合<span class="math inline">\(t_1 a(n)+t_2b(n)\)</span>也是该递推关系的解。</li>
+<li><strong>无重根的情况：</strong> 给定初值后，解应当是<span class="math inline">\(a_n = \sum_{i=1}^m \alpha_i r_i^n\)</span>，<span class="math inline">\(r_i\)</span>是式(1)的第<span class="math inline">\(i\)</span>个解，并且没有重根。<span class="math inline">\(\alpha\)</span>是待定系数，根据初值确定。</li>
+<li><strong>二阶方程，有重根<span class="math inline">\(r_0\)</span></strong>：<span class="math inline">\(a_n = α_1 r_0^n + α_2 nr_0^n\)</span></li>
+<li><strong>一般情况，有重根</strong>: 每个<span class="math inline">\(r_i\)</span>的系数<span class="math inline">\(\alpha\)</span>变成：<span class="math inline">\(\alpha_1+\alpha_2n+...\alpha_{m-1}n^{m-1}\)</span>，根据初值求出各个<span class="math inline">\(\alpha\)</span>。对应的<span class="math inline">\(r_i\)</span>是几重根，其系数中就有几个<span class="math inline">\(\alpha\)</span></li>
+</ul></li>
+<li>非齐次: 已知<span class="math inline">\(a_0, a_1, ...a_k \text{(初值)}, a_n = \sum_{i=1}^k c_ia_{n-i}+F(n)\)</span>，<span class="math inline">\(c\)</span>均为常数
+<ul>
+<li>首先解出相伴齐次方程的通解<span class="math inline">\(a_h(n)\)</span></li>
+<li>再找到非齐次方程一个特解<span class="math inline">\(a_p(n)\)</span></li>
+<li>最终结果为<span class="math inline">\(a_n = a_p+a_h\)</span></li>
+<li><font color="#FDC92">★</font>如果<span class="math inline">\(f(n)\)</span>为<span class="math inline">\(n\)</span>次多项式,则特解一般也是n次多项式</li>
+<li><font color="#FDC92">★</font><span class="math inline">\(f(n) = \beta^n\)</span>，且<span class="math inline">\(\beta\)</span>是<span class="math inline">\(e\)</span>重特征根(不是根时e=0)，则特解为<span class="math inline">\(a_p = pn^e\beta^n\)</span>，<span class="math inline">\(p\)</span>为待定系数。</li>
+</ul></li>
+</ul>
+<h4 id="分治不做要求">分治（不做要求）</h4>
+<ul>
+<li>时间复杂度为：<span class="math inline">\(f(n) = af(n/b) + g(n)\)</span>，<span class="math inline">\(f(.)\)</span>是该类问题需要的复杂度，<span class="math inline">\(g(n)\)</span>是把子问题合并为原问题需要的复杂度。</li>
+</ul>
+<h4 id="生成函数">生成函数</h4>
+<ul>
+<li><span class="math inline">\(\{a_n\} \Rightarrow \sum_i a_ix^i \Rightarrow f(x)\)</span></li>
+<li><span class="math inline">\(C(m, n) \Rightarrow (1+x)^m\)</span></li>
+<li><strong>物体配置问题：</strong> 不同面值<span class="math inline">\(\{n_1, n_2...n_k\}\)</span>组合得到一个特定数字<span class="math inline">\(k\)</span>，求方法数<span class="math inline">\(p\)</span>。（求解带限制的不定方程）
+<ul>
+<li>同一面值不可辨别：解不定方程<span class="math inline">\(\sum_i m_i = q\)</span>，<span class="math inline">\(m_i\)</span>为面值<span class="math inline">\(n_i\)</span>贡献的数值，即<span class="math inline">\(m_i=\text{选取ni的数量} \times n_i\)</span></li>
+<li>构造生成函数:<span class="math inline">\(f(x)=\prod_i^{i=k} \sum x^{(m_i\text{可取的值)}}\)</span>，该函数中<span class="math inline">\(x^q\)</span>的系数即为答案。</li>
+<li>若不定方程中的<span class="math inline">\(m\)</span>没有限制，则转化为之前的组合问题。（<span class="math inline">\(C_{n+k-1}^n\)</span>）</li>
+<li>若同样面值的纸币/砝码之间有区别，则给相应的项加上乘方。可以看出，每一项表示的是每一个*每最小粒度可辨别元素**贡献的面值。</li>
+<li>例子：分饼干，砝码称重量，钱面值组合</li>
+</ul></li>
+</ul>
+<h4 id="容斥原理">容斥原理</h4>
+<ul>
+<li><span class="math inline">\(|A\cup B| = |A| + |B|-|A \cap B |\)</span></li>
+<li><span class="math inline">\(|A \cup B \cup C|= |A|+|B|+|B|-|A\cap B|-|A \cap C|- |B \cap C |+| A\cap B \cap C|\)</span></li>
+<li>一般形式: <span class="math inline">\(\bigcup_i A_i = \sum_{j=1}^{n} \left( (-1)^{i+1}\sum_{i=1}^{j}\bigcap_i|A_i| \right)\)</span></li>
+<li>m个元素<span class="math inline">\((x)\rightarrow\)</span> n个元素<span class="math inline">\((y)\)</span>，求满射数量: 映射总数为<span class="math inline">\(N=n^m\)</span>，先求非满射数量<span class="math inline">\(p\)</span>。设集合<span class="math inline">\(P_i\)</span>表示第<span class="math inline">\(i\)</span>个<span class="math inline">\(y\)</span>值没有被映射到，则<span class="math inline">\(p=|\bigcup_i P_i|\)</span>，即可利用容斥原理求出<span class="math inline">\(p\)</span>，答案即为<span class="math inline">\(N-p\)</span>。</li>
+<li>满射数目为<span class="math inline">\(\sum_{i=0}^{n-1} (-1)^i(n-i)^mC_n^i\)</span></li>
+<li><font color="#FDC92">★</font><span class="math inline">\(n\)</span>元素错位排列<span class="math inline">\(n!\sum_{i=0}^n (-1)^i {1\over i!}\)</span>：</li>
+</ul>
+<h3 id="数论">数论</h3>
+<ul>
+<li>整除：<span class="math inline">\(a|b,a|c \Rightarrow a| (mb+nc)\)</span></li>
+<li>取余数(<span class="math inline">\(mod\)</span>)</li>
+<li>模同余<span class="math inline">\(a \equiv b (mod\ m)\)</span>：<span class="math inline">\(a-b=km, a\ mod\ m = b\ mod\ m\)</span></li>
+<li>约定<span class="math inline">\(a+_mb=(a + b) (mod\ m), a\times_mb=(a \times b) (mod\ m)\)</span></li>
+<li>模同余の性质：</li>
+</ul>
+<p><span class="math display">\[\bigstar a ≡ b (mod\ m), c ≡ d (mod\ m)\Rightarrow a + c ≡ b + d (mod\ m), ac ≡ bd (mod\ m)\]</span></p>
+<p><span class="math display">\[a ≡ b (mod\ m)\Rightarrow ac ≡ bc (mod\ m)\text{(不能反推，反推要求c,m互素)}\]</span></p>
+<p><span class="math display">\[(a + b) (mod\ m) = ((a\ mod\ m) + (b\ mod\ m)) mod\ m\]</span></p>
+<p><span class="math display">\[ab\ mod\ m = ((a\ mod\ m) (b\ mod\ m)) mod\ m\ (2)\]</span></p>
+<ul>
+<li>模指数运算：快速计算<span class="math inline">\(b^n\ mod\ m\)</span>
+<ul>
+<li>将<span class="math inline">\(n\)</span>分解为二进制串<span class="math inline">\((n_1n_2n_3n_4...)_{(2)}\)</span>，分别从低阶到高计算<span class="math inline">\(b^{n_i2^{i}} mod\ m\)</span>，利用式子<span class="math inline">\((2)\)</span>计算高阶模运算。</li>
+</ul></li>
+<li>算数基本定理：任何一个大于1的正整数都可以唯一地分解为若干个素数的乘积</li>
+<li>最大公约数<span class="math inline">\(gcd(a, b)\)</span>,最小公倍数<span class="math inline">\(lcm(a, b)\)</span></li>
+<li><span class="math inline">\(lcm(2^3 3^ 5 7^ 2 , 2^ 4 3^ 3 ) = 2 ^{max(3,4)} 3^{ max(5,3)} 7^ {max(2,0)} = 2 ^4 3^ 5 7^ 2\)</span></li>
+<li>最大公约数上式中<span class="math inline">\(max\)</span>改为<span class="math inline">\(min\)</span>即可</li>
+<li><span class="math inline">\(ab = gcd(a, b)\times lcm(a, b)\)</span></li>
+<li><font color="#FDC92">★</font><strong>辗转相除</strong>:<span class="math inline">\(a&gt;b\Rightarrow gcd(a, b) = gcd(a\ mod\ b, b)\)</span></li>
+<li><span class="math inline">\(\exists s, t\in Z, gcd(a, b)=sa+tb\)</span></li>
+<li><font color="#FDC92">★</font><span class="math inline">\(a\)</span>关于<span class="math inline">\(m\)</span>的模逆<span class="math inline">\(\bar{a}:a\bar{a}\equiv 1(mod\ m)\)</span>
+<ul>
+<li><span class="math inline">\(m&gt;1, a\ m\)</span>互素，则<span class="math inline">\(\bar{a}\)</span>存在且唯一。</li>
+</ul></li>
+<li><font color="#FDC92">★</font><strong>解同余方程</strong><span class="math inline">\(ax \equiv b (mod\ m)\)</span>: 两边同乘模逆得到<span class="math inline">\(\bar{a}ax \equiv \bar{a}b (mod\ m)\)</span>，简单表示为<span class="math inline">\(\bar{a}ax\equiv\bar{a}b\ (3)\)</span>
+<ul>
+<li>利用传递性求解：<span class="math inline">\(\bar{a}a\equiv1\)</span>两边同乘x得<span class="math inline">\(\bar{a}ax\equiv x\)</span>，结合式子(3)得<span class="math inline">\(x\equiv \bar{a}b\)</span>，即可解出x。</li>
+</ul></li>
+<li>欧拉函数:<span class="math inline">\(\Phi(n)=[1,n]\)</span>中与<span class="math inline">\(n\)</span>互素的数字的数目。</li>
+<li><font color="#FDC92">★</font><span class="math inline">\(n\)</span>为素数，则<span class="math inline">\(\Phi(n) =n-1\)</span></li>
+<li><font color="#FDC92">★</font><span class="math inline">\(p,q\)</span>为素数，则<span class="math inline">\(Φ(pq) = pq − (p + q − 1) = (p − 1)(q − 1)\)</span></li>
+<li><font color="#FDC92">★</font><strong>欧拉定理：</strong><span class="math inline">\(a ^{Φ(n)} ≡ 1 (mod\ n),a\)</span>与<span class="math inline">\(n\)</span>互素。</li>
+<li><font color="#FDC92">★</font>费马小定理（欧拉定理在<span class="math inline">\(n\)</span>取一素数<span class="math inline">\(p\)</span>时的情况）：<span class="math inline">\(a ^p ≡a(mod\ p),p\)</span>是素数，<span class="math inline">\(a\)</span>是任意整数。这是<span class="math inline">\(p\)</span>为素数的<strong>必要条件</strong>。</li>
+<li><font color="#FDC92">★</font>或者: <span class="math inline">\(a^{p-1}\equiv1(mod\ p)\)</span></li>
+<li>例：计算<span class="math inline">\(7^{222} mod\ 11\)</span>。<span class="math inline">\(222=11\times 10+2,\)</span>利用费马小定理得</li>
+</ul>
+<p><span class="math display">\[7^{10}\equiv1(mod\ 11)\Rightarrow (7^{10})^{11}\equiv1^{11}(mod\ 11) \]</span></p>
+<p>再计算<span class="math inline">\(7^2mod\ 11\)</span>即可推出答案。</p>
+<ul>
+<li>RSA:随机选取2个(足够大的)大素数<span class="math inline">\(p\)</span>和<span class="math inline">\(q(p&lt;q)\)</span>, 记<span class="math inline">\(n=pq\)</span>, <span class="math inline">\(\Phi(n)=(p-1)(q-1)\)</span>. 选择正整数（加密公钥）<span class="math inline">\(e\)</span>,要求<span class="math inline">\(e\)</span>与 <span class="math inline">\(\Phi(n)\)</span>互素, 解密私钥<span class="math inline">\(d\)</span>是<span class="math inline">\(e\)</span>关于于模<span class="math inline">\(\Phi\)</span>(n)的模逆，即<span class="math inline">\(de\equiv1(mod\ \Phi(n))\)</span></li>
+<li><font color="#FDC92">★</font>加密时对每一段明文<span class="math inline">\(m&lt;n: c =m ^e mod\ n\)</span>，这里要求<span class="math inline">\(m,n\)</span>必须互素</li>
+<li><font color="#FDC92">★</font>解密时对密文<span class="math inline">\(c:m = c^d mod\ n\)</span></li>
+<li>其中加密公钥e和n是公开的, 而<span class="math inline">\(p,q, \Phi(n),d\)</span>(秘钥)是保密的.</li>
+</ul>
+<h3 id="格论">格论</h3>
+<ul>
+<li>运算<span class="math inline">\(*,@\)</span>的吸收律：<span class="math inline">\(x*(x@y)=x,x@(x*y)=x\)</span></li>
+<li>一个非空集合S和定义在该集合上的一个或多个运算<span class="math inline">\(o_1,o_2...o_n\)</span>组成的系统称为代数系统<span class="math inline">\(&lt;S;o_1, o_2, ...o_n&gt;\)</span></li>
+<li>偏序：反对称(<span class="math inline">\(x≤y , y≤x \Rightarrow x=y\)</span>），传递，自反。</li>
+<li>最小上界<span class="math inline">\(a\vee b\)</span>，最大下界<span class="math inline">\(a\wedge b\)</span></li>
+<li>全序：链式偏序，良序：任何子集都有最小元。</li>
+<li>格：任意两个元素都有最小上界和最大下界の偏序（注意，上下界必须唯一）</li>
+<li>完全格：任意子集都有最小上界和最大下界の偏序</li>
+<li><strong>代数格：</strong><span class="math inline">\(&lt;L; \vee, \wedge&gt;\)</span>
+<ul>
+<li>幂等：<span class="math inline">\(x∧x=x; x∨x=x\)</span></li>
+<li>交换：<span class="math inline">\(x∧y=y∧x; x∨y=y∨x\)</span></li>
+<li>结合：<span class="math inline">\((x∧y)∧z = x∧(y∧z); (x∨y)∨z = x∨(y∨z)\)</span></li>
+<li><font color="#FDC92">★</font>吸收：<span class="math inline">\(x ∧(x∨y ) = x = x∨(x∧y )\)</span></li>
+<li><font color="#FDC92">★</font>分配不等式：<span class="math inline">\(x∨(y∧z)≤(x∨y)∧(x∨z),(x∧y) ∨(x∧z)≤x∧(y∨z)\)</span>，二者对偶。</li>
+</ul></li>
+<li><font color="#FDC92">★</font>当证明相等时,一般从偏序的定义出发,或者证明两者相互有≤的关系</li>
+<li>对偶命题：<span class="math inline">\(\leqslant,\geqslant,∧,∨\)</span>分别替换成<span class="math inline">\(\leqslant,\geqslant,∨,∧\)</span></li>
+<li>求子格：要注意哈塞图删掉了原本存在的一些连线</li>
+<li>分配格：满足分配律。钻石格、五角格不是.</li>
+</ul>
+<h3 id="我记不住的比较难的部分"><del>我记不住的</del>比较难的部分</h3>
+<p>辗转相除求模逆，解同余方程，解递推方程（齐次、非齐次），证明格代数不等式，全错位排列</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    why
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/08/考完就不看の离散数学笔记！/" title="考完就不看の离散数学笔记！">git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/08/考完就不看の离散数学笔记！/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/05/各种乱七八糟的记录/" rel="next" title="各种乱七八糟的记录">
+                <i class="fa fa-chevron-left"></i> 各种乱七八糟的记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/24/考完就不看の操作系统笔记！/" rel="prev" title="考完就不看の操作系统笔记！">
+                考完就不看の操作系统笔记！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzQ3NS8xNDAwNw=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4" alt="why">
+          <p class="site-author-name" itemprop="name">why</p>
+           
+              <p class="site-description motion-element" itemprop="description">中国武汉 华中科技大学 联创团队</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/category/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/creeper121386" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/5807408179/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:694029828@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.google.com.hk/" target="_blank" title="Google">
+                  
+                    <i class="fa fa-fw fa-google"></i>
+                  
+                    
+                      Google
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://unique-ailab.github.io/" title="UniqueAI" target="_blank">UniqueAI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hustunique.com/" title="联创团队" target="_blank">联创团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://luxiaoxiaodan.github.io/" title="华亭鹤唳" target="_blank">华亭鹤唳</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://jojo.fit/" title="yjxの博客" target="_blank">yjxの博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://moecode.com/" title="moecode" target="_blank">moecode</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://alexfan.cn/" title="AlexFan" target="_blank">AlexFan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://icegrave0391.github.io/" title="zcqの博客" target="_blank">zcqの博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#计数原理"><span class="nav-number">1.</span> <span class="nav-text">计数原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题背景n个物体放到k个盒子中"><span class="nav-number">1.1.</span> <span class="nav-text">问题背景：N个物体放到k个盒子中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高级计数原理"><span class="nav-number">2.</span> <span class="nav-text">高级计数原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常系数线性递推方程"><span class="nav-number">2.1.</span> <span class="nav-text">★常系数线性递推方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分治不做要求"><span class="nav-number">2.2.</span> <span class="nav-text">分治（不做要求）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成函数"><span class="nav-number">2.3.</span> <span class="nav-text">生成函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容斥原理"><span class="nav-number">2.4.</span> <span class="nav-text">容斥原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数论"><span class="nav-number">3.</span> <span class="nav-text">数论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格论"><span class="nav-number">4.</span> <span class="nav-text">格论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我记不住的比较难的部分"><span class="nav-number">5.</span> <span class="nav-text">我记不住的比较难的部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">why</span>
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<script type="text/javascript" src="/js/src/click_why.js"></script>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en_US">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="https://me.idealli.com/images/load.gif" data-src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+<meta name="theme-color" content="#222">
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('这是一篇加密的文章...密码是多少呢OvO') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="Cp1.Introduction 1.冯诺依曼结构  冯诺依曼硬件结构：主机＋外设＋总线 思想：程序存储在存储器中；按照指令地址访存并取出指令。 硬件系统的五大部分：  运算器：做实际的计算 控制器：产生控制信号（硬布线，微程序） 存储器：读、写两种模式。容量与地址线的数量相对应。 输入设备、输出设备  冯诺依曼软硬件之间的关系：相互依存，逻辑等效（有的功能既可以硬件实现，也可软件实现），协同发展">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考完就不看の组原笔记！">
+<meta property="og:url" content="git@github.com:creeper121386/Creeper121386.github.io.git/2019/09/16/考完就不看の组原笔记！/index.html">
+<meta property="og:site_name" content="WHYの小窝">
+<meta property="og:description" content="Cp1.Introduction 1.冯诺依曼结构  冯诺依曼硬件结构：主机＋外设＋总线 思想：程序存储在存储器中；按照指令地址访存并取出指令。 硬件系统的五大部分：  运算器：做实际的计算 控制器：产生控制信号（硬布线，微程序） 存储器：读、写两种模式。容量与地址线的数量相对应。 输入设备、输出设备  冯诺依曼软硬件之间的关系：相互依存，逻辑等效（有的功能既可以硬件实现，也可软件实现），协同发展">
+<meta property="og:locale" content="en_US">
+<meta property="og:updated_time" content="2020-02-21T09:52:59.930Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="考完就不看の组原笔记！">
+<meta name="twitter:description" content="Cp1.Introduction 1.冯诺依曼结构  冯诺依曼硬件结构：主机＋外设＋总线 思想：程序存储在存储器中；按照指令地址访存并取出指令。 硬件系统的五大部分：  运算器：做实际的计算 控制器：产生控制信号（硬布线，微程序） 存储器：读、写两种模式。容量与地址线的数量相对应。 输入设备、输出设备  冯诺依曼软硬件之间的关系：相互依存，逻辑等效（有的功能既可以硬件实现，也可软件实现），协同发展">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="git@github.com:creeper121386/Creeper121386.github.io.git/2019/09/16/考完就不看の组原笔记！/">
+
+
+
+
+
+  <title>考完就不看の组原笔记！ | WHYの小窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2db1eb18d81341c69d3326b3f812f6e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en_US">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+   
+    <a href="https://github.com/creeper121386" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WHYの小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">今天也是美好的一天呢！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://github.com/creeper121386" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git@github.com:creeper121386/Creeper121386.github.io.git/2019/09/16/考完就不看の组原笔记！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="why">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WHYの小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">考完就不看の组原笔记！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-16T08:29:52+08:00">
+                2019-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="cp1.introduction">Cp1.Introduction</h2>
+<h3 id="冯诺依曼结构">1.冯诺依曼结构</h3>
+<ul>
+<li>冯诺依曼硬件结构：主机＋外设＋总线</li>
+<li>思想：程序存储在存储器中；按照指令地址访存并取出指令。</li>
+<li>硬件系统的五大部分：
+<ul>
+<li>运算器：做实际的计算</li>
+<li>控制器：产生控制信号（硬布线，微程序）</li>
+<li>存储器：读、写两种模式。容量与地址线的数量相对应。</li>
+<li>输入设备、输出设备</li>
+</ul></li>
+<li>冯诺依曼软硬件之间的关系：相互依存，逻辑等效（有的功能既可以硬件实现，也可软件实现），协同发展。</li>
+<li>计算机不同层次：自顶向下分别为：应用程序，高级语言，汇编语言，操作系统，指令集架构（<strong>软硬的分界线</strong>），微代码，硬件。</li>
+</ul>
+<a id="more"></a>
+<h3 id="计算机系统性能的评价指标">2.计算机系统性能的评价指标</h3>
+<ul>
+<li>机器字长：机器一次能处理的二进制位数。</li>
+<li>总线宽度：数据总线一次传递的最大的信息位数。</li>
+<li>主存容量＆存储带宽：带宽指主存的读写速度</li>
+<li>CPU 的主频、时钟周期</li>
+<li>外频：CPU 和主板之间同步的时钟频率</li>
+<li>倍频：主频除以外频</li>
+<li>CPI：执行一条指令需要的平均<strong>时钟周期数目</strong>（注意，单位不是时间，是周期数目）<span class="math inline">\(CPI=程序中所有指令的时钟周期之和 \div 程序中的指令总数＝程序中各类指令的CPI加权求和\)</span></li>
+<li>MIPS：每秒钟CPU能执行指令的总条数，单位是<strong>百万条</strong>每秒</li>
+<li>全性能公式：<span class="math inline">\(MIPS = \frac{f}{CPI\times 10^6}\)</span></li>
+<li>程序执行时间＝CPU时间＋IO时间＋访存时间＋排队时延</li>
+<li><span class="math inline">\(CPU时间＝指令总条数\times CPI / f＝\frac{指令总条数}{MIPS\times 10^6}\)</span></li>
+</ul>
+<h2 id="cp2.data-representation">Cp2.Data Representation</h2>
+<ul>
+<li>机器数：二进制串</li>
+<li>源码、反码、补码是三种不同的<strong>表示方法</strong></li>
+<li>反码加法要回卷（进位位要加到末尾）</li>
+<li>移码表示：在补码的基础上，符号位取反。</li>
+<li>定点数：定点小数可以表示<span class="math inline">\([-1, 1-2^{9n}]\)</span>内的小数；定点整数可以表示<span class="math inline">\([-2^n, 2^n-1]\)</span>内整数。</li>
+<li>浮点数：分开表示数据的范围和精度。格式：<span class="math inline">\(2^{阶码}\times 尾数\)</span>，阶码和尾数均使用补码表示，各自带有自己的符号位。</li>
+<li>IEEE754格式：规定了阶码和尾数各自的位长。只有一个符号位，表示整个真值的符号（第一位）
+<ul>
+<li>单精度：32bit，1位符号，8位阶码，后23位尾数；</li>
+<li>双精度：64bit，1位符号，11位阶码，后52位尾数</li>
+<li>另外，阶码在保存时，加上了偏移量。因此在解读阶码时，结果应该减去127（单精度）或1023（双精度）</li>
+<li>另外，尾数部分，默认是1.xxxxx</li>
+</ul></li>
+<li>给定IEEE754二进制表示，还原真值：<span class="math inline">\((-1)^{符号位}\times 2^{8位阶码-127} \times 1.后23位尾数\)</span></li>
+<li>给定真值，写出IEEE浮点数：先转换为二进制，然后变成<span class="math inline">\((-1)^s \times 2^e \times 1.M\)</span>的形式，则<span class="math inline">\(e+127\)</span>为阶码，M为尾数。</li>
+<li>特殊数字：
+<ul>
+<li>阶码为0，尾数为0：机器0</li>
+<li>阶码为255，尾数为0：无穷(X/0)</li>
+<li>阶码为255，尾数不为0：NaN（0/0）</li>
+</ul></li>
+</ul>
+<h3 id="数据校验">数据校验</h3>
+<ul>
+<li>在信息位后加入<span class="math inline">\(r\)</span>位校验位。</li>
+<li>码距：在一种编码下，相邻合法编码之间的差值。</li>
+<li>码距<span class="math inline">\(\geqslant e+1\)</span>时，具有检测<span class="math inline">\(e\)</span>个错误的能力</li>
+<li>码距<span class="math inline">\(\geqslant 2t+1\)</span>时，具有纠正<span class="math inline">\(t\)</span>个错误的能力</li>
+<li>码距<span class="math inline">\(\geqslant e+t+1\)</span>时，具有检测<span class="math inline">\(e\)</span>个错误，并纠正<span class="math inline">\(t\)</span>个错误的能力</li>
+<li>奇偶校验：校验位只有1位，描述信息位中1的个数是否是偶数/奇数。偶校验是各位异或，奇校验是各位异或后再取非。</li>
+<li>奇偶校验的码距为2。</li>
+<li>改进：双向校验：把一串二进制串拆成多个小段，叠成二维，在两个方向上进行奇偶校验。</li>
+</ul>
+<h3 id="crc校验">CRC校验</h3>
+<ul>
+<li>CRC校验：信息位数<span class="math inline">\(k\)</span>和校验位数r要求<span class="math inline">\(k+r\leqslant2^r - 1\)</span></li>
+<li>发送方：给定生成多项式<span class="math inline">\(G\)</span>，求校验码<span class="math inline">\(r\)</span>：用待传输数据和<span class="math inline">\(G\)</span>做模二运算，得到的余数即为校验码。</li>
+<li>接收方校验：用收到的整个二进制串和<span class="math inline">\(G\)</span>做模二除法，看余数不是0则说明有错。</li>
+<li>当有1位错时，不同位出错得到的余数是不同的。因此可以根据具体的余数值纠错：具体做法是：
+<ul>
+<li>针对一个特定的<span class="math inline">\(G\)</span>，首先要看，当左边第一位出错时，对应的余数是什么。这里假设是<span class="math inline">\(a&#39;\)</span>。</li>
+<li>接收方得到二进制串，做除法得到非零余数<span class="math inline">\(a\)</span>后，看是否<span class="math inline">\(a=a&#39;\)</span>，是则说明第一位出错，直接纠错。不是则接下来想办法让出错位移到第一位。</li>
+<li>具体办法是：在<span class="math inline">\(a\)</span>后补一个0，继续除<span class="math inline">\(G\)</span>，得到的新余数后继续补0，继续除<span class="math inline">\(G\)</span>…每补一次0，我们就把收到的二进制串循环左移1位，直到得到的余数为<span class="math inline">\(a&#39;\)</span>。此刻，位于当前二进制串最左边的一位就是出错位。</li>
+</ul></li>
+</ul>
+<h3 id="海明校验">海明校验</h3>
+<ul>
+<li>有一点与CRC相同，海明校验信息位数<span class="math inline">\(k\)</span>和校验位数r要求<span class="math inline">\(k+r\leqslant2^r - 1\)</span></li>
+<li>与CRC不同，海明校验是校验位穿插在信息位之间。校验位的位置为<span class="math inline">\(1, 2, 4...2^i\)</span>：</li>
+</ul>
+<p><span class="math display">\[{\color{red}1}, {\color{red}2}, 3, {\color{red}4}, 5, 6, 7, {\color{red}8}, 9, 10, 11\]</span></p>
+<ul>
+<li>校验位的计算：某个校验位是由某些信息位的偶校验（异或得到）。对第<span class="math inline">\(i\)</span>位，假如该位是信息位，将<span class="math inline">\(i\)</span>表示为尽量少的校验位的和，例如<span class="math inline">\(6=4+2\)</span>，则将第6位加入到第2位和第4位的校验分组中。对所有的信息位都进行这样的操作，就可以得到各个校验位分别负责的校验分组。 （啊啊啊啊啊这里文字说不清楚啊 自己意会好惹</li>
+<li>纠错：为了能够纠错，再设置<span class="math inline">\(r\)</span>个指错字，每个指错字是一位校验位和它负责的分组进行异或得到。</li>
+</ul>
+<h2 id="cp3.calculator">Cp3.Calculator</h2>
+<ul>
+<li>补码加减法要丢掉进位。</li>
+<li>补码求和<code>补码(x+y) = 补码(x) + 补码(y)</code></li>
+<li>有符号数溢出检测方法:
+<ul>
+<li>正+正=负；负+负=正时，即对加数符号位<span class="math inline">\(f_0, f_1\)</span>以及结果符号位<span class="math inline">\(f_s\)</span>，有<span class="math inline">\(f_0f_1\bar f_s + \bar f_0 \bar f_1 f_s =1\)</span></li>
+<li>看最高一位数据位的进位和符号位的进位是否相同，不相同即为溢出。</li>
+<li>使用双符号位，计算后两个符号位若不同，说明溢出。（本质和方法2相同）</li>
+</ul></li>
+<li>无符号数溢出检测：加法看进位，有进位即为溢出。减法相反，进位为0说明溢出。</li>
+<li>原码一位乘法：符号单独运算，数据的绝对值进行运算。与手工运算相比，区别是：得到部分积后，将部分积右移到乘数寄存器中（而不是左移）。</li>
+<li>补码一位乘法：<span class="math inline">\((X\cdot Y)_补 = X_补\cdot \sum_i(y_{i+1} - y_i)2^{-i}\)</span>。</li>
+<li>具体来说，首先求出<span class="math inline">\(X, -X, Y\)</span>的补码，然后对<span class="math inline">\(Y\)</span>，首先令<span class="math inline">\(Y_{i+1}=0\)</span>，然后从最低位开始到最高位，重复进行：
+<ul>
+<li>如果<span class="math inline">\(y_i = y_{i+1}\)</span>，部分积<span class="math inline">\(+0\)</span>，且部分积算数右移一位</li>
+<li>如果<span class="math inline">\(y_{i+1}y_i = 10\)</span>，部分积<span class="math inline">\(+X_补\)</span>，且部分积算数右移一位</li>
+<li>如果<span class="math inline">\(y_{i+1}y_i = 01\)</span>，部分积<span class="math inline">\(+(-X_补)\)</span>，且部分积算数右移一位</li>
+<li>（啊啊啊啊这里也好乱 请直接康<a href="%5Bhttps://www.icourse163.org/learn/HUST-1003159001#/learn/content?type=detail&amp;id=1211610875&amp;sm=1%5D(https://www.icourse163.org/learn/HUST-1003159001#/learn/content?type=detail&amp;id=1211610875&amp;sm=1)">mooc</a>后半部分的实例</li>
+</ul></li>
+<li>原码乘法设计：使用与门阵列</li>
+<li>补码一位乘法器：算前求补和算后求补。</li>
+<li>定点除法器：恢复余数法，不恢复余数法。啊淦这里我不复习啦jojo！</li>
+<li>浮点数加减法：
+<ul>
+<li>规格化浮点数：尾数用双符号位，尾数的最高数据位和符号位不同。即尾数为<span class="math inline">\(00.1....., 11.0......\)</span>的浮点数。</li>
+<li>可以使用左移的方法规格化一个浮点数。这里注意左移时，阶码也要同步改变。</li>
+<li>浮点数加减：分为五步：提出大的阶码，修改小阶码浮点数的尾数（对阶），尾数加减，规格化，舍入，溢出处理。</li>
+<li>如果规格化后，阶码双符号位不同，说明发生了溢出。</li>
+</ul></li>
+<li>本章难点：乘除法的计算过程。</li>
+</ul>
+<h2 id="cp4.storage">Cp4.Storage</h2>
+<ul>
+<li>存储体系：<span class="math inline">\(CPU\rightarrow cache\rightarrow 主存\rightarrow 辅存(disk)\)</span></li>
+<li>存储字长：一个存储单元包含的二进制位数。例32位系统的含义是，一个字长度为32。</li>
+<li>数据对齐：例如在32位系统，双字长数据地址二进制串的末三位一定是<span class="math inline">\(000\)</span>（长度为8字节，因此地址为8的整数倍）</li>
+<li>数据不对齐存储：节省了空间，但增加了访存次数。</li>
+<li>大端方式：地址从大到小存放数据，首地址是数据的最高字节地址。小段反之。</li>
+<li>SRAM（静态存储单元）：啊啊啊啊啊模电杀我 这里太难了</li>
+<li>存储扩展：位扩展：<span class="math inline">\(M \times N \rightarrow M\times kN\)</span>。使用<span class="math inline">\(k\)</span>个存储器，每个存储器负责二进制串中不同的<span class="math inline">\(N\)</span>位。连接时，数据线分线，地址线和控制线直接连接。</li>
+<li>字扩展：<span class="math inline">\(M \times N \rightarrow kM\times N\)</span>。使用<span class="math inline">\(k\)</span>个存储器，数据线直接相连，地址线由于cpu比存储器多，高位的多余的地址线连到片选译码器，片选译码器产生控制线连到片选段。</li>
+<li>片选信号的作用：在字扩展中，每个芯片负责整个地址空间中的一部分（类比段式存储），片选用来选择是哪一片寄存器。例如，假如一共有8个芯片，那么需要3位片选信号(<span class="math inline">\(2^3 = 8\)</span>)</li>
+<li>多体交叉存储器：和字扩展类似，只不过使用低位作为片选信号（而非高位），即相邻地址在不同的芯片中，可以并行访问。这时需要为每个芯片配置地址寄存器。</li>
+<li>对这种存储器，要想以流水线方式存取，需要满足：<span class="math inline">\(存储周期=总线传送周期\times 芯片数\)</span>（即最后一个芯片中取出数据后，刚好可以再回到第一个芯片取数据）</li>
+</ul>
+<h3 id="cache">cache</h3>
+<ul>
+<li>cpu访问cache以字为单位，cache和主存交换数据以块为单位。</li>
+<li>读：cpu访问cache，如果命中，直接取；若不命中，则去主存取数据，并且主存将该数据所在的整个块都搬到cache中。</li>
+<li>写：写穿：cpu同时向cache和主存写数据；写回：cpu只写cache，整个写操作完成后，再把cache数据写到主存。</li>
+<li>地址映射：主存地址划分为二维：块地址+偏移地址。其中块地址由标记（该块是否在cache中）和索引（该块在cache哪个位置）组成。</li>
+<li>cache的存储空间划分为若干行，每一行的大小可以存储主存中的<strong>一块</strong>数据。此外，每一行还有tag（数据是否在cache）,valid（该数据是否有效）,dirty（主存中数据是否最新）三个标志信息。</li>
+<li>地址映射：由此可见，cache中一行和主存中一块相对应。具体的映射方式有：
+<ul>
+<li>全相连：主存中一块可映射到任一行。</li>
+<li>直接相连：根据cache的行数<span class="math inline">\(n\)</span>给主存分区，使得每个区里有<span class="math inline">\(n\)</span>个块。主存中一个块在映射时，它是所在分区的第几块，就只能映射到cache的第几行。也就是说，现在把块地址再分为两级：分区地址和cache行。到时候就根据cache行地址去cache的对应行查找。这里有个问题，对cache某一行而言，有很多块都有可能向自己搬迁数据。那么在访问该行时，如果该行有数据，不能直接读，而是需要同时看要访问数据的分区地址（标记）和该cache行内填入的标记是否一样，一样的话才能访问；如果不一样的话，仍然去主存访问，并使用本次访问的块替换调之前占据该行的数据。</li>
+<li><span class="math inline">\(k\)</span>路组相连：cache也分组，<span class="math inline">\(k\)</span>路的含义是，要求每组内的都有<span class="math inline">\(k\)</span>行。主存地址仍然分3级，只不过原来的第二级地址（cache行地址）改为表示cache的组号。在映射时，一个主存块地址可以映射到它对应的cache组的任一行，兼顾了全相连和直接相连。如果当cache某一组已经放满，且这时又需要放入新的组，此时就需要从该组中选一行进行替换，下面再讲怎么替换。</li>
+</ul></li>
+<li>替换算法：
+<ul>
+<li>先进先出FIFO：按顺序来，替换最早进cache的一行。设计时需要为每一行设一个计数器，记录每一行停留在cache中的轮数。每访问一次cache，组内所有行计数值都+1</li>
+<li>近期最少使用LRU：设计数器，新加入的行的计数值为0，之后每次访问，所有<strong>没有命中</strong>的行计数+1。一旦被命中，计数值就清0.</li>
+<li>最不经常使用LRU：设计数器，新加入的行的计数值为0，之后每命中一次计数+1。</li>
+<li>随机替换：字面意思w</li>
+</ul></li>
+<li>替换算法的抖动：不断地顶掉又调入某个块</li>
+<li>做题：注意cache总容量包括标记和有效位。</li>
+<li>虚拟存储器：类比swap分区。分为段式、页式、段页式。将主存和辅存中的部分空间共同视为一个虚拟存储器。</li>
+<li>MMU：页表寄存器。记录逻辑页号到物理页号的映射。其中每一项也有有效位。</li>
+<li>地址划分：虚页号&amp;页内偏移，页表放在主存中。</li>
+<li>工作过程：CPU用虚拟地址访问MMU，MMU得到该地址的物理地址，去访问cache或主存。</li>
+<li>后备缓冲器TLB：快表，缩短了访问主存的次数。</li>
+</ul>
+<h2 id="cp5.-command-system">Cp5. Command System</h2>
+<ul>
+<li>指令字长：有单字长、双字长、半字长等。长度和机器字长对应。</li>
+<li>根据操作数数目分类：
+<ul>
+<li>三地址指令：<code>A1 OP A1 -&gt; A3</code></li>
+<li>两地址指令：<code>A1 OP A2 -&gt; A1</code></li>
+<li>一地址指令：<code>AC OP A1 -&gt; AC</code></li>
+</ul></li>
+<li>指令格式：操作码字段+寻址方式+地址码字段，其中地址码根据操作数数目，再分为多个操作数的地址。 &gt; 这里注意，多操作数的情况下，需要为每个地址都分配该地址所使用的寻址方式字段。</li>
+<li>指令的寻址方式：
+<ul>
+<li>顺序寻址：找到顺序存放的一系列指令的第一条指令的地址，然后pc不断+1得到后续指令。注意这里的+1指的是加一条指令所占的字长。</li>
+<li>跳跃寻址：遇到jmp之类的转移指令时，直接将要跳转的指令地址放入pc</li>
+</ul></li>
+<li>操作数寻址：汇编里那一套。
+<ul>
+<li>立即数寻址：操作数就是给出的立即数本身。</li>
+<li>寄存器寻址：操作数在寄存器中。数据长度</li>
+<li>直接寻址：操作数是所给出的<strong>立即数地址</strong>里的<strong>内容</strong></li>
+<li>间接寻址：地址码给出操作数<strong>地址的地址</strong>。例如<code>mov ax, [200h]</code>，首先访问<code>200h</code>单元，将其中的内容看做地址，再访问该地址，再得到的内容才是操作数。</li>
+<li>寄存器间接寻址：寄存器中存操作数地址的地址。<code>mov ax, bx</code></li>
+<li>相对寻址：操作数的地址由pc的值+一个基地址<code>d</code>得到。这种方式中，由于pc的值会不断累加，因此实际操作数的地址是<code>d+pc+指令字长</code></li>
+<li>基址寻址：基址寄存器中的值+一个偏移值得到最终地址。</li>
+<li>变址寻址：一个基地址+变址寄存器中的值。</li>
+</ul></li>
+<li>指令格式设计：</li>
+<li>注意，在研究执行一条指令访问多少次主存时，一定要注意不止取操作数、保存结果要访问主存，<strong>取这条指令本身</strong>也要访问主存。当前指令长度跨多少个机器字，取指令时就要访问几次主存。</li>
+</ul>
+<h3 id="mips">MIPS</h3>
+<ul>
+<li>mips指令：无内部互锁の流水线指令集。</li>
+<li>三种指令格式：
+<ul>
+<li>R型：三地址指令。6位操作码（始终为0）+3x5位地址码<span class="math inline">\(R_sR_tR_d\)</span>+5位shamt码+6位funct码。寻址方式由unct字段隐式说明。这里操作数和结果的地址都是寄存器（所有只有5位，32个寄存器）。由于op全0，funct才真正起到操作码的功能。shamt指示在移位指令中要移动的位数。</li>
+<li>I型：三地址指令。6位op+2x5位地址码<span class="math inline">\(R_sR_t\)</span>+16位立即数。分为四类：运算型（<code>Rs op imm -&gt; Rt</code>），访存型（<code>读主存lw: Rs+imm -&gt; Rt; 写主存sw: Rt -&gt; Rs+imm</code>），移位，条件转移（<code>bne, beq: pc+(imm&lt;&lt;2) -&gt; pc</code>）。</li>
+<li>J型：6位op+26位立即数。有两种：
+<ul>
+<li>无条件转移：<code>高四位(pc++)和imm&lt;&lt;2拼接 -&gt; pc</code></li>
+</ul></li>
+<li>IJ型指令的寻址方式都由op隐式说明。支持立即数、寄存器、基址、相对寻址，以及伪直接寻址。</li>
+</ul></li>
+</ul>
+<h2 id="cp.6-cpu">CP.6 CPU</h2>
+<ul>
+<li>cpu组成：
+<ul>
+<li>运算器（状态寄存器、通用寄存器、ALU）</li>
+<li>控制器（取指令、执行指令），程序控制、操作控制、时序控制、异常控制</li>
+</ul></li>
+<li>特殊寄存器：
+<ul>
+<li>PC</li>
+<li>IR：指令寄存器，存当前正执行的指令</li>
+<li>AR：锁存访问内存的地址</li>
+<li>DR：锁存主存取出的数据</li>
+<li>AC：累加寄存器</li>
+<li>PSW：程序状态字，类比x86里的flag。</li>
+</ul></li>
+<li>取指令：<code>Mem[pc++] -&gt; IR（指令寄存器）</code></li>
+<li>操作控制器：控制取指令执行指令。</li>
+<li>数据通路：考虑在两个寄存器之间传输数据的情形。数据从a通过组合逻辑电路传到b。时钟周期到来时，a的值经过一个寄存器延迟<code>clk_to_Q</code>后更新它的值。新值通过组合逻辑电路到达b的最长路径时间为关键路径实验<code>l</code>，b更新值需要建立时间<code>setuptime</code>，那么cpu的时钟周期应当大于这三个时延的和。</li>
+<li>另外，ab时钟同时到来，而b在刚刚获得一个新值以后要求保持该值一段时间<code>holdtime</code>，如果a到b传输的最快时间（最短路径时延+<code>clk_to_Q</code>）比<code>holdtime</code>小，就会破坏b的保持。因此要求这两个值的和<code>&gt;holdtime</code>。</li>
+<li>单总线结构：要防止总线争用，需要分时并锁存出入总线的信号。执行一条加法指令需要3个时钟周期</li>
+<li>双总线：执行指令时可以并行地传送两个操作数。加法需要2个时钟周期</li>
+<li>三总线结构：没有锁存器，加法只需要一个时钟周期。</li>
+<li>单周期mips：要求一条指令在一个周期内完成。</li>
+<li>cpu控制器输出的控制信号的产生：首先时序产生器周期地产生时序信号，不同的时序信号和指令译码得到的信号通过组合逻辑，就可以得到控制器的控制信号。</li>
+<li>控制器设计：
+<ul>
+<li>传统三级时序：三级分别是：一个指令周期内有若干时钟周期，一个时钟周期内又有若干节拍。当前处于哪个时钟周期、哪个节拍这些时序信号由时序产生器来产生。我们将一个指令的不同时钟周期看做不同状态，做出状态图，就可以通过组合逻辑产生控制信号。</li>
+<li>变长指令周期：把不同的指令在<strong>执行周期</strong>的所有节拍都认为是不同的状态。（而之前是，认为所有指令都有同样多的节拍，把不同的节拍看做不同的状态）。把这些不同状态输入一个fsm，生成次态。</li>
+<li>微程序控制器：不同的指令中的不同时钟周期对应不同的状态，这里和上面都一样。但是注意到在每个状态下，要产生的控制信号是固定的，因此可以直接将其存储到一个存储器中，根据不同的状态直接取用即可。这里，一条指令对应的操作我们称为微程序；不同状态下，对应的固定的控制信号，将其拼接成一个二进制串，称为微指令；微指令在存储器中的地址称为微地址。那么我们只要在的状态下，用微地址访问存储器，得到微指令，也就得到了要输出的控制信号。</li>
+<li>微指令内除了各个控制信号的拼接部分（操作控制字段），末尾还有顺序控制字段：包括判别字段和下址字段。下址字段给出下一跳微指令在控存中的地址。判别字段中的<span class="math inline">\(p_1\)</span>为0时，下一微指令直接就是下址字段的微指令；为1说明下址字段无效，要根据地址转移逻辑来获得下一个微地址（这种情况往往是取指令微程序的最后一条微指令中会出现，因为对它而言，下一个微地址需要根据具体的指令类型来跳转到相应的微程序）</li>
+<li>不同的机器指令，在取指令阶段的状态是相同的，只是在执行阶段根据指令的不同分支为了不同的若干状态，因此不同机器指令的取指令部分，可以共用微程序。</li>
+<li>因此现在，我们从IR中取出指令后，不需要使用复杂逻辑生成控制信号，而只需要一个地址转移逻辑，生成对应微程序的微地址即可。</li>
+</ul></li>
+<li>微指令的设计：微指令中的控制字段往往很长，希望可以压缩:
+<ul>
+<li><p>对微命令（控制信号）分类：将互斥型的微命令（不会同时为1）进行编码（而不是<code>onehot</code>方式）。例如，有七个微命令互斥，那么可以使用二进制编码压缩为3位。 &gt; 这里注意，3位编码最多只能表示7位而不是8位。因为要预留一个000来表示没有任何信号。</p></li>
+<li>压缩下址字段：约定位微指令都顺序存放，那么就不需要下址字段，直接顺序执行即可。</li>
+<li><p>垂直微指令：和机器指令有点类似。原来的一个时钟周期对应一条微指令，可能执行多条机器指令，现在让其中的每一个机器指令对应一条微指令（就是把原来一条长的微指令拆成几个短的）。不过有一说一，这个好像实际中性能太差已经被淘汰了。</p></li>
+</ul></li>
+<li>要看的：性能评价指标计算（cpi，mips），原码补码一位乘法，双符号位浮点数加减 ，恢复余数法，不恢复余数法，定点数 浮点数数据表示范围，字位扩展 <!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2MjgzNDkxMDAsMjAwNDQwMTg2NCwtMz
+gyODUxODk2LC0xNjY0MzY2NTk2LDIxMTY3MTMxOTQsMTcwNjA0
+MzY0NSwxNTI1NTk3MjgzLDE4MDQ2MjY3MTEsLTEzOTgyMDI4ND
+EsMTczOTg1MDMzLC04MzgxNjc5NDQsLTE0MDg2Njg4ODUsLTIw
+MjMwNzYwNCwxODk4MDM4ODk0LC0xODkwODgzODY2LC0zMjk4Mz
+A5NzgsMTQxMjA2ODAyMCw5MzI0MTQyOTIsOTIyOTEwNTI3LDQ4
+NzIyODYwMV19
+--></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    why
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="git@github.com:creeper121386/Creeper121386.github.io.git/2019/09/16/考完就不看の组原笔记！/" title="考完就不看の组原笔记！">git@github.com:creeper121386/Creeper121386.github.io.git/2019/09/16/考完就不看の组原笔记！/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/28/whyの学习笔记-julia/" rel="next" title="whyの学习笔记:julia">
+                <i class="fa fa-chevron-left"></i> whyの学习笔记:julia
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/27/考完就不看の数值分析笔记！/" rel="prev" title="考完就不看の数值分析笔记！">
+                考完就不看の数值分析笔记！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzQ3NS8xNDAwNw=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4" alt="why">
+          <p class="site-author-name" itemprop="name">why</p>
+           
+              <p class="site-description motion-element" itemprop="description">中国武汉 华中科技大学 联创团队</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/category/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/creeper121386" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/5807408179/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:694029828@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.google.com.hk/" target="_blank" title="Google">
+                  
+                    <i class="fa fa-fw fa-google"></i>
+                  
+                    
+                      Google
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://unique-ailab.github.io/" title="UniqueAI" target="_blank">UniqueAI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hustunique.com/" title="联创团队" target="_blank">联创团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://luxiaoxiaodan.github.io/" title="华亭鹤唳" target="_blank">华亭鹤唳</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://jojo.fit/" title="yjxの博客" target="_blank">yjxの博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://moecode.com/" title="moecode" target="_blank">moecode</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://alexfan.cn/" title="AlexFan" target="_blank">AlexFan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://icegrave0391.github.io/" title="zcqの博客" target="_blank">zcqの博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#cp1.introduction"><span class="nav-number">1.</span> <span class="nav-text">Cp1.Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冯诺依曼结构"><span class="nav-number">1.1.</span> <span class="nav-text">1.冯诺依曼结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统性能的评价指标"><span class="nav-number">1.2.</span> <span class="nav-text">2.计算机系统性能的评价指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp2.data-representation"><span class="nav-number">2.</span> <span class="nav-text">Cp2.Data Representation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据校验"><span class="nav-number">2.1.</span> <span class="nav-text">数据校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crc校验"><span class="nav-number">2.2.</span> <span class="nav-text">CRC校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海明校验"><span class="nav-number">2.3.</span> <span class="nav-text">海明校验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp3.calculator"><span class="nav-number">3.</span> <span class="nav-text">Cp3.Calculator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp4.storage"><span class="nav-number">4.</span> <span class="nav-text">Cp4.Storage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cache"><span class="nav-number">4.1.</span> <span class="nav-text">cache</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp5.-command-system"><span class="nav-number">5.</span> <span class="nav-text">Cp5. Command System</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mips"><span class="nav-number">5.1.</span> <span class="nav-text">MIPS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp.6-cpu"><span class="nav-number">6.</span> <span class="nav-text">CP.6 CPU</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">why</span>
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<script type="text/javascript" src="/js/src/click_why.js"></script>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>

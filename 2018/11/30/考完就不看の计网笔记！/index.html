@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en_US">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="https://me.idealli.com/images/load.gif" data-src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+<meta name="theme-color" content="#222">
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('这是一篇加密的文章...密码是多少呢OvO') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="令人混乱的专有名词大集合 cp.1 Introduction  DSL:数字用户线，一种接入网的方式，特点是带宽独享 HFC:光纤同轴电缆混合网络，特点是带宽共享 电路交换网络：  第一代网络，交换数据前需要建立起一条从发端到收端的物理通路 在数据交换的全部时间内用户始终占用端到端的固定传输信道 交换双方可实时进行数据交换而不会存在任何延迟 带宽利用率低下  分组交换网络：  第二代网络，以分组的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考完就不看の计网笔记！">
+<meta property="og:url" content="git@github.com:creeper121386/Creeper121386.github.io.git/2018/11/30/考完就不看の计网笔记！/index.html">
+<meta property="og:site_name" content="WHYの小窝">
+<meta property="og:description" content="令人混乱的专有名词大集合 cp.1 Introduction  DSL:数字用户线，一种接入网的方式，特点是带宽独享 HFC:光纤同轴电缆混合网络，特点是带宽共享 电路交换网络：  第一代网络，交换数据前需要建立起一条从发端到收端的物理通路 在数据交换的全部时间内用户始终占用端到端的固定传输信道 交换双方可实时进行数据交换而不会存在任何延迟 带宽利用率低下  分组交换网络：  第二代网络，以分组的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/K-1wlcl_Y-thdwzU_wnlgOAkdSBBoVk0_ASRcvukQNa-eOqBZGzIydplnEUxvo2Ke9XXfV2ySoLG52ZzVayFKE3Pb6qlzar-sheKtIWhXQUz_I_MhNlSqFYik-tfXaOkD8Ej59xrJNevOpv8mVobBnQk039Ux5tpj7yY0000">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/K-1wENdVY-thdsviUhgavVc4Dbsxvxls0mMUhrx_h6-f0jVplHEVxvu3brRGjLD0qy75XQp3Ik5vvqgWA4YwV-BBXiON-oO_RT-5ResLmjFU_XVhrZrkQ7pMtVPqGoEwHLOA48tF-YQzd34V0000">
+<meta property="og:updated_time" content="2020-03-15T02:10:11.059Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="考完就不看の计网笔记！">
+<meta name="twitter:description" content="令人混乱的专有名词大集合 cp.1 Introduction  DSL:数字用户线，一种接入网的方式，特点是带宽独享 HFC:光纤同轴电缆混合网络，特点是带宽共享 电路交换网络：  第一代网络，交换数据前需要建立起一条从发端到收端的物理通路 在数据交换的全部时间内用户始终占用端到端的固定传输信道 交换双方可实时进行数据交换而不会存在任何延迟 带宽利用率低下  分组交换网络：  第二代网络，以分组的">
+<meta name="twitter:image" content="http://www.plantuml.com/plantuml/svg/K-1wlcl_Y-thdwzU_wnlgOAkdSBBoVk0_ASRcvukQNa-eOqBZGzIydplnEUxvo2Ke9XXfV2ySoLG52ZzVayFKE3Pb6qlzar-sheKtIWhXQUz_I_MhNlSqFYik-tfXaOkD8Ej59xrJNevOpv8mVobBnQk039Ux5tpj7yY0000">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/11/30/考完就不看の计网笔记！/">
+
+
+
+
+
+  <title>考完就不看の计网笔记！ | WHYの小窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2db1eb18d81341c69d3326b3f812f6e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en_US">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+   
+    <a href="https://github.com/creeper121386" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WHYの小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">今天也是美好的一天呢！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://github.com/creeper121386" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/11/30/考完就不看の计网笔记！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="why">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WHYの小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">考完就不看の计网笔记！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T19:20:01+08:00">
+                2018-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="令人混乱的专有名词大集合">令人混乱的专有名词大集合</h3>
+<h4 id="cp.1-introduction">cp.1 Introduction</h4>
+<ul>
+<li><code>DSL</code>:数字用户线，一种接入网的方式，特点是带宽独享</li>
+<li><code>HFC</code>:光纤同轴电缆混合网络，特点是带宽共享</li>
+<li>电路交换网络：
+<ul>
+<li>第一代网络，交换数据前需要建立起一条从发端到收端的物理通路</li>
+<li>在数据交换的全部时间内用户始终占用端到端的固定传输信道</li>
+<li>交换双方可实时进行数据交换而不会存在任何延迟</li>
+<li>带宽利用率低下</li>
+</ul></li>
+<li>分组交换网络：
+<ul>
+<li>第二代网络，以分组的方式收发报文，每个分组有首部。</li>
+<li>传输数据时不必预先确定分组的传输路径</li>
+<li>存储转发能力：整个分组都到达路由器才会开始转发</li>
+</ul></li>
+<li>数据报网络：<strong>分组交换网络的一种</strong>，分组的目的地址决定下一跳。</li>
+<li>虚电路网络：<strong>分组交换网络的一种</strong>，分组携带一个虚电路标识，该标识决定下一跳。</li>
+<li>对等体(peer)：不同机器上的<strong>对应层</strong>的实体</li>
+<li>服务访问点：同一系统中相邻两层的实体进行交互的地方</li>
+</ul>
+<a id="more"></a>
+<h4 id="cp.2-application-layer">cp.2 Application Layer</h4>
+<ul>
+<li><p>SSL: 安全套接字层。位于应用层和TCP之间的协议，提供加密的TCP连接。</p></li>
+<li><p>SMTP发送邮件过程： <span class="math display">\[a本地\xrightarrow{邮件内容} a的server \xrightarrow[TCP连接]{邮件内容}b的server\]</span></p></li>
+</ul>
+<blockquote>
+<p>b的server收到邮件后存储在服务器上，等待b查看时，再发往b本地。本地获得服务器上的邮件，可以使用pop3, imap, http等协议。</p>
+</blockquote>
+<ul>
+<li>DNS还负责负载均衡的功能，当一个域名对应多个ip时，在这些ip中轮转。</li>
+<li>DNS记录的格式：<span class="math inline">\((name, value, type, ttl)\)</span>，根据type的不同，将name解析为value
+<ul>
+<li><span class="math inline">\(type=A\)</span>:解析主机名<span class="math inline">\(\rightarrow\)</span>ip地址</li>
+<li><span class="math inline">\(type=cname\)</span>:解析别名<span class="math inline">\(\rightarrow\)</span>真名</li>
+<li><span class="math inline">\(type=ns\)</span>:解析域名<span class="math inline">\(\rightarrow\)</span>该域权威域名服务器的主机名</li>
+<li><span class="math inline">\(type=mx\)</span>:解析name<span class="math inline">\(\rightarrow\)</span>与 name相关的邮件服务器域名</li>
+</ul></li>
+<li><span class="math inline">\(p2p^*\)</span>：还需要再看看</li>
+</ul>
+<h4 id="cp3.transport-layer">cp3.Transport Layer</h4>
+<ul>
+<li>多路分解：接受方将报文段交付给对应的网络进程的socket。分解的含义是：一个发来的报文段<span class="math inline">\(\rightarrow\)</span>多个socket</li>
+<li>多路复用：发送方从多个网络进程的socket收集数据块，并装配成报文段。
+<ul>
+<li>多路复用要求socket有唯一标示，且带有源端口号和目的端口号</li>
+</ul></li>
+<li>周知端口号：<span class="math inline">\([0,1023]\)</span>范围的端口号</li>
+<li>UDP的socket由目的ip和目的端口唯一标识。</li>
+<li>TCP的socket由源ip、源端口、目的ip、目的端口四个标志唯一标识。也就是说，来自不同发送发的TCP报文，即使目的地一样，也会多路分解给不同的socket。（server为每个客户端连接都建立新的socket）</li>
+<li>UDP提供的全部功能：多路复用/分解，差错检查（<strong>求校验和</strong>：以16bit为单位，将各个16bit相加，如果有进位，<strong>将进位加到结果末尾</strong>（回卷），然后对最后结果求反码得到校验和。）</li>
+<li>ARQ：自动重传请求协议</li>
+<li>rdt：可靠数据传输协议
+<ul>
+<li>1.0: 假设信道可靠，简单的发送和接收</li>
+<li>2.0: 考虑bit差错，引入检验手段（例如校验和）。接收方接收数据后，发现检验成功/失败，则发出ack/nak；发送方发送数据后，等待ack/nak，并继续传下一个数据/重传受损数据</li>
+<li>2.1:考虑连ack/nak也可能受损。则：
+<ul>
+<li>发送方：以<span class="math inline">\(0,1,0,1...\)</span>交替的方式为发送的分组编号。发送0号分组后，等待ack/nak。如果收到ack，则继续发1号分组；若收到nak/受损的回应（就发送方也不知道收到的是ack/nak了），则重发0号分组。</li>
+<li>接收方：一开始等待接受0号分组，成功接受则交付数据并发送ack，并等待1号分组；检验失败则发nak，等待重传0号；若收到了1号分组，则说明这个收到的1号分组是一个重传（即自己之前发出去的ack受损了），则再发一个ack（emmm就是 这个接收方其实是作为ack/nak的发送方。这种情况不是ack受损了吗，所以接收方此时作为发送方，就重发ack）。</li>
+</ul></li>
+<li>2.2：在2.1基础上，ack也有了0,1的序号之分。接收方不发nak，当等待0号分组时，收到数据的检验出错时，发一个1号ack。这个时候发送方本应该等待0号ack，但是却收到了1号ack（冗余ack），发送方就知道刚刚发出去的0号分组出问题了，需要重传。</li>
+<li>3.0：考虑数据包和ack都可能丢失。则发送方在2.2基础上，发包后启动一个计时器，在等待ack时，如果等待时间超过阈值，则直接重传。（如果是丢失ack，接收方不需要管，发送方收不到ack时间超过阈值，直接重发就行了）</li>
+<li>继续改进：不用发一个包，等到ack再发下一个，可以一口气都发完，然后等那个出问题重传哪个。这就要求要使用序号来唯一标识每一个分组。</li>
+</ul></li>
+<li>窗口：发送方用来标识已发送但未确认的分组、可用但未发送的分组的一段范围。例如，下图中，发送方可以使用的分组是0到8，其中<span class="math inline">\(0, 1, 2\)</span>号分组已经收到了对应的ack，那么窗口范围包括剩余的3~6分组。</li>
+</ul>
+<p><span class="math display">\[ \underbrace{0, 1, 2,}_{got\; ack}  \overset{window}{\boxed{3, 4, 5, 6}}, \underbrace{7, 8, 9, 10...}_{not\; available} \]</span></p>
+<ul>
+<li>GBN：一种重传协议，一个分组出问题，重传它以及它后面的所有分组。<strong>实现：</strong> 接收方如果收到有问题的分组（例如第4个分组丢失了，那么接收方收到分组3后，直接收到了分组5），则从此刻开始，<strong>丢弃后续的分组</strong>，并不断发送冗余ack（最后一个成功接受的ack，也就是ack3）。发送方收到这些ack3后，<strong>什么都不做</strong>，直到发送方发现ack3接受超时，再重新发3,4,5…分组。</li>
+<li>SR：选择重传协议。与GBN的区别在于：发送方在某个分组ack超时后，只发该分组本身；接收方接收到失序分组后不丢弃。而是将其缓存，知道所有分组都被收到。此时，接收方也有一个滑动窗口，窗口内是期望接受（但还没接受）的分组序号。（或者可以理解为，将要发送但还没有发送的ack序号，这两者是等价的）
+<ul>
+<li>此外，接收方如果收到了序号在窗口左边（即之前已经发出的ack对应的序号）的分组，说明之前发出去的ack损坏/丢失了，此时虽然已经收到过一次，接收方仍要<strong>再发一次该分组对应的ack</strong>。</li>
+</ul></li>
+<li>MSS: 最大报文长度。(<strong>不包括首部</strong>)</li>
+<li>TCP首部：
+<ul>
+<li>序号：该报文段的第一个字节处在整个数据流中的第几号。注意，是对字节编号，而不是分组。例如假设bit流中报文的长度都是1000，那么各个报文的序号分别为0, 1000, 2000…</li>
+<li><del>等等 不对劲啊 这里给字节编序号到底考不考虑首部啊</del></li>
+<li>确认号：每个机器在发送数据的同时，也要接受数据。确认号是我希望从对方那里获得的下一个字节的序号。</li>
+</ul></li>
+<li>估计往返时间：取各个抽样时间的加权平均，其中常用<span class="math inline">\(\alpha=0.125\)</span>：</li>
+</ul>
+<p><span class="math display">\[\text{EstimatedRTT} = (1- \alpha)\text{EstimatedRTT} + \alpha\text{SampleRTT}\]</span></p>
+<ul>
+<li>估计RTT误差:使用同样的方法。这里常用<span class="math inline">\(\beta=0.25\)</span>：</li>
+</ul>
+<p><span class="math display">\[\text{DevRTT} = (1- \beta)\text{DevRTT} + \beta|\text{SampleRTT} - \text{EstimatedRTT}|\]</span></p>
+<ul>
+<li>根据上述两个指标可以得到TCP的超时间隔为：<span class="math inline">\(\text{TimeoutInterval} = \text{EstimatedRTT} + 4\times \text{DevRTT}\;(1)\)</span>。并且每当出现超时时，该超时间隔都会加倍</li>
+</ul>
+<blockquote>
+<p>为什么要加倍？是为了防止即将被确认的后继报文过早超时。也就是说，假如这个超时报文其实再等一下下就可以收到了，加倍超时时间就可以防止之后的报文纷纷超时。其实也相当于一种对当前<span class="math inline">\(RTT\)</span>的估计叭）</p>
+</blockquote>
+<blockquote>
+<p>这里再注意嗷，出现超时后间隔加倍并不影响在<strong>没有超时的情况下</strong>，式<span class="math inline">\((1)\)</span>的计算。也就是说，虽然超时后间隔临时加倍了，但是之后再次采样<span class="math inline">\(\text{SampleRTT}\)</span>时，超时间隔仍然按照式<span class="math inline">\((1)\)</span>来算。</p>
+</blockquote>
+<ul>
+<li>快速重传：TCP对于乱序分组的处理：如果接受到乱序分组，则发送冗余ack（参考GBN）。由于收到乱序分组时，有可能意味着出现丢包了。所以，发送方连续收到<strong>3个</strong>冗余ack后，就重新发送该包。</li>
+<li><blockquote>
+<p>之所以是三个，是因为冗余ack达到3个及以上的时候，是丢包的可能性比较大（而不是单纯的乱序）。还有一点，是3个<strong>冗余</strong>ack，也就是连上最初一个正确的ack，总计有4个同一序号的ack。</p>
+</blockquote></li>
+<li>流量控制：防止发报太快，接收方的buffer溢出。方法是接收方把当前剩余buffer大小填到<code>窗口</code>字段（假设值为<code>rwind</code>），通知发送方，限制发送方的窗口大小不能超过这个值。</li>
+</ul>
+<blockquote>
+<p>由于这个<code>窗口</code>信息是附加在首部里的，只能随着数据捎带发送。那么当接收方buffer已满，即<code>rwind=0</code>，将这个信息发回发送方后，发送方暂停发送数据。那么，在没有数据交换的情况下，即使之后buffer有了空闲，发送方也无从得知。 解决办法：规定发送方一旦受到<code>rwind=0</code>的信息，就在后续持续发送只含一个字节的<strong>试探报文</strong>，目的就是为了在接收方有空闲时，可以及时知晓。</p>
+</blockquote>
+<ul>
+<li>三次握手：教材<span class="math inline">\(p169\)</span>。<code>SYN</code>比特只有在三次握手的前两次中为1，其他情况都是0</li>
+<li><p>关闭连接：如果我想关闭连接，则我发送<code>FIN=1</code>的报文，表示“我没东西要发了”，然后对方给出ack；（此时连接处于半关闭。我不发东西，但我仍可以接收）之后对方也向我发送Fin报文，我给出ack。连接正式关闭。</p></li>
+<li><p>Reno算法：TCP使用的拥塞控制算法。设置一个拥塞窗口<code>cwind</code>，限制当前可发送的数据量。以及一个阈值<code>ssthresh</code>，限制<code>cwind</code>的大小。实际可发送分组范围应取<strong>接收端</strong>窗口<code>rwind</code>和拥塞窗口的交集。那么，发送速率为：</p></li>
+</ul>
+<p><span class="math display">\[rate = \frac{cwind}{RTT}bytes/s\]</span> - 拥塞控制的具体方法： - 慢启动阶段：连接初期，发射速率很小，<code>cwind=MSS, ssthresh=64kb</code>。 - 无丢包时，则每收到一个ack，将<code>cwind+=MSS</code>。（等价于每过一个<code>RTT</code>,<code>cwind</code>翻倍）由于这一点，发射速率在慢启动阶段以指数速度增加</p>
+<blockquote>
+<p>这里注意，发射速率本身是很慢的，所以叫慢启动。只不过<strong>增长速度快</strong>。</p>
+</blockquote>
+<ul>
+<li>拥塞避免阶段：任意时刻出现<code>cwind == ssthresh</code>时，<code>cwind</code>改为线性增长。（每过一个<code>RTT</code>，<code>cwind+=MSS</code>）</li>
+<li>若出现三个冗余ack：快速重传，然后<code>ssthresh = cwind/2, cwind = ssthresh + 3MSS</code>，并且此后<code>cwind</code>线性增加。</li>
+<li>若出现超时，<code>ssthresh = cwind/2, cwind = MSS</code>，重新进入慢启动阶段。</li>
+<li>总结：思想是“加性增，乘性减”。即增加<code>cwind</code>大小是线性（加性）的，减小大小是翻倍的（乘性）。</li>
+<li>Tahoe算法：与reno的区别是，收到三个冗余ack也将<code>cwind=1 MSS</code>（而不是减半）</li>
+<li>TCP的吞吐量（忽略慢启动）：平均为<span class="math inline">\(0.75 \frac{cwind}{RTT}\)</span>；若已知丢包率<span class="math inline">\(L\)</span>，则吞吐量为：<span class="math inline">\(\frac{1.22MSS}{RTT\sqrt{L}}\)</span></li>
+</ul>
+<h4 id="cp4.networklayer">cp4.NetworkLayer</h4>
+<ul>
+<li>链路层交换机和路由器的区别：分别根据链路层首部信息和网络层首部信息进行转发。</li>
+<li>线头阻塞：路由器输入端口的处理（查表）速度超过路由器交换结构的速度，导致产生排队。</li>
+<li>三种交换方式：经内存、经主机、经内联网络交换。前两种分别受限于内存带宽、总线带宽。</li>
+<li>路由器的输入和输出端口都分别由三部分组成，输出输出端口分别如下：</li>
+</ul>
+<img src="http://www.plantuml.com/plantuml/svg/K-1wlcl_Y-thdwzU_wnlgOAkdSBBoVk0_ASRcvukQNa-eOqBZGzIydplnEUxvo2Ke9XXfV2ySoLG52ZzVayFKE3Pb6qlzar-sheKtIWhXQUz_I_MhNlSqFYik-tfXaOkD8Ej59xrJNevOpv8mVobBnQk039Ux5tpj7yY0000">
+<img src="http://www.plantuml.com/plantuml/svg/K-1wENdVY-thdsviUhgavVc4Dbsxvxls0mMUhrx_h6-f0jVplHEVxvu3brRGjLD0qy75XQp3Ik5vvqgWA4YwV-BBXiON-oO_RT-5ResLmjFU_XVhrZrkQ7pMtVPqGoEwHLOA48tF-YQzd34V0000">
+<ul>
+<li>排队部分需要设置缓冲区，如果输出缓冲区溢出，则会导致输入端口排队，甚至分组丢失。所以输出端口缓冲区大小要合理，一般为<span class="math inline">\(B = RTT \times R\)</span>;对于tcp连接，则为：<span class="math inline">\(B = \frac{RTT\times R}{\sqrt{N}}\)</span></li>
+<li>RED：随机早期检测。一种队列管理算法（决定有排队时，先转发队列中哪个分组）。对各个输出端口上的队列计算加权平均值<code>avg</code>，并设置两个阈值<code>min, max</code>：
+<ul>
+<li>若当前<code>avg&lt;min</code>，则允许接受分组；</li>
+<li>若<code>avg&gt;max</code>则丢弃或标记分组</li>
+<li>其他情况下，按照一定概率丢弃或标记分组</li>
+</ul></li>
+<li>MTU：最大传输单位。类比运输层的MSS。传输单位称为数据片。</li>
+<li>IP数据报首部一般长度为20字节。整个数据报最大长度65535</li>
+<li>路由器的每一个接口都有一个<strong>不同网络号</strong>的ip地址</li>
+<li>子网：通过从主机号中借用一些bit位，来标记子网。</li>
+<li>子网掩码：网络号和子网号的bit位全1，主机号全0</li>
+<li>作用：路由器是根据目的网络地址来决定转发表的（而不是具体的目的ip）。先检查目的ip的网络号+子网号（子网掩码和目的ip做与操作），如果是路由器所在网络，则交付给对应的子网；若不是，则转发给下一个路由器。</li>
+<li>CIDR：一种地址表示方式，写法是<code>ip地址/子网掩码长度</code></li>
+<li>最长前缀匹配：使用CIDR时，路由器转发表存网络前缀，根据网络地址确定下一跳的地址，在匹配目的ip时，选择匹配到的网络前缀中最长的。</li>
+<li>地址块：指具有同一前缀的一批ip地址</li>
+<li>WAN：广域网</li>
+<li>LAN：局域网</li>
+<li>DHCP：动态主机配置协议:从服务器上动态获取IP地址。一个新机器加入子网后，进行如下四步：
+<ul>
+<li>新机器广播<code>dhcp发现报文</code>：源ip为<code>0.0.0.0</code>，目的ip为<code>255.255.255.255:67</code></li>
+<li>任意一个dhcp服务器收到后，广播<code>dhcp提供报文</code>，包含新机器可以使用的ip地址</li>
+<li>新机器收到后，选定一个dhcp服务器，发送<code>dhcp请求报文</code></li>
+<li>dhcp服务器返回<code>DHCP ack</code></li>
+</ul></li>
+<li>NAT：网络地址转换。NAT路由器从dhcp服务器处获得一个单一的ip地址<code>ip1</code>，并负责将子网中设备的端口和这个ip地址的端口进行映射（反向代理？）在外界看来，整个子网都只有这一个ip地址。</li>
+<li>UPnP：通用即插即用。允许在NAT后的机器参与TCP、UDP连接。</li>
+<li>ICMP：因特网控制报文协议。网络层协议，位于ip协议上层，常用来差错控制。</li>
+<li>IPv6：32bit$$128bit。改变：无检验和，中间节点不再进行分片，首部长度固定，有跳数限制（超过该上限则直接丢弃）</li>
+<li>选路算法分类：全局/分散，静态/动态，负载敏感/负载迟钝
+<ul>
+<li>Dijkstra’s算法：没错，又是它。这个算法是全局的。</li>
+</ul></li>
+<li>LS算法：链路状态算法。是全局选路算法。</li>
+<li><p>OSPF协议：实现各个路由器之间链路状态同步的协议。使用洪泛法广播链路状态。</p></li>
+<li><p>DV算法：距离向量算法。是分散选路算法。原理：</p></li>
+</ul>
+<p><span class="math display">\[d(x, y) = \min_v[c(x, v) + d(v, y)], v \in neighbor(x)\]</span></p>
+<p>其中<span class="math inline">\(c(x, v)\)</span>表示<span class="math inline">\(x\)</span>和他的邻居<span class="math inline">\(v\)</span>之间的费用。对于一个节点<span class="math inline">\(x\)</span>，距离向量<span class="math inline">\(\mathbf{D}_x=[d(x, v_1), d(x, v_2)...d(x, v_n)]\)</span>，即为<span class="math inline">\(x\)</span>到其他所有节点的费用的估计值。所有节点在自己的距离向量变化时，向自己的邻居发送自己新的距离向量；当节点收到邻居的距离向量时，使用上述公式更新自己的距离向量。</p>
+<ul>
+<li>毒性逆转：为了解决坏路问题<span class="math inline">\((p252)\)</span>。解决方法：如果路由<span class="math inline">\(x\rightarrow y\)</span>的路径上经由邻居<span class="math inline">\(z\)</span>，则<span class="math inline">\(x\)</span>向<span class="math inline">\(z\)</span>发送距离向量时，令<span class="math inline">\(d(x,y)=\infty\)</span>。</li>
+</ul>
+<blockquote>
+<p>为什么要这么做？这里的<span class="math inline">\(d(x,y)=\infty\)</span>含义是，<span class="math inline">\(x\rightarrow y\)</span>要经过<span class="math inline">\(z\)</span>，也就是说<span class="math inline">\(x\)</span>的距离向量中，<span class="math inline">\(d(x, y)\)</span>这个值就是从<span class="math inline">\(z\)</span>获得来的。<span class="math inline">\(x\)</span>告诉<span class="math inline">\(z\)</span>，我离<span class="math inline">\(y\)</span>的距离是<span class="math inline">\(\infty\)</span>，就可以避免<span class="math inline">\(z\)</span>反过来从<span class="math inline">\(x\)</span>到达<span class="math inline">\(y\)</span>。</p>
+</blockquote>
+<ul>
+<li>AS:自治系统</li>
+<li>IGP：内部网关协议。负责AS内部的选路的一类协议。例如RIP 和 OSPF 协议。</li>
+<li>EGP：外部网关协议，负责AS之间的选路。例如BGP协议。</li>
+<li>网关：AS边缘的路由器，具有连接到其他AS的链路。</li>
+<li>RIP协议：互联网中实现距离向量选路算法的协议。使用路由表（包含目的地、下一跳路由器、到目的地的跳数）来表示距离向量。每隔30s向邻居发送RIP通告来交换距离向量。</li>
+<li>OSPF 协议：实现Dijkstra算法的协议。每个路由器都拥有当前AS的拓扑图，并在状态改变时向<strong>AS内全部路由器</strong>广播。</li>
+<li>BGP协议：边界网关协议。每个AS指定一个路由器作为BGP发言人，发言人之间互相交换各自的AS可以抵达哪些前缀的地址。交换的内容包括：
+<ul>
+<li>前缀</li>
+<li>AS-PATH：这个通告已经经过的AS</li>
+<li>NEXT-HOP：到下一跳AS的具体的路由器</li>
+</ul></li>
+<li>BGP路由选择：当一个AS知道到一条前缀的多条路由，路由器必须在可能的路由中选择一条：
+<ul>
+<li>本地偏好值: 策略决定。具有最高本地偏好值的路由将被选择。</li>
+<li>最短AS-PATH ：在余下的路由中，具有最短AS-PATH的路由将被选择。</li>
+<li>热土豆路由：从余下的路由中，选择具有最靠近NEXT-HOP路由器的路由。</li>
+</ul></li>
+</ul>
+<h4 id="cp5.linklayer">cp5.LinkLayer</h4>
+<ul>
+<li>链路层数据单位：帧。</li>
+<li>TDMA、FDMA、CDMA：信道划分协议。分别根据时间、频率、编码方式来划分信道。</li>
+<li>碰撞：多个节点在同一时刻在共享信道上发送帧，导致互相干扰。</li>
+<li>随机访问协议：解决碰撞检测和回复问题。</li>
+<li>ALOHA：如果传输的帧发生碰撞，该节点在全部传输完碰撞帧后以概率p重传该帧，或以概率1-p等待一帧的传输时间。等待时间结束后以概率p重传该帧，或以概率1-p继续等待。</li>
+<li>时隙ALOHA：分成一个个时隙，只在时隙开始传帧。</li>
+<li>CSMA：载波监听协议。不断监听信道，寻找合适的发帧时机。如果信道空闲则直接发，如果正忙，则：
+<ul>
+<li>非坚持型：不再监听，休眠随机时间后再重新监听</li>
+<li>“1”坚持：继续监听，一有空闲马上发</li>
+<li>“P”坚持：继续监听，一有空闲，以概率p发帧；以概率（1－P）延迟时间τ(网络中最远的端到端的传播时延)，然后重新监听。</li>
+</ul></li>
+<li>CSMA/CD：载波侦听/碰撞检测。边传输边检测碰撞，一旦发现当前帧碰撞，就停止传输。在第<span class="math inline">\(k\)</span>次冲突后，睡眠时间<span class="math inline">\(r\times 2\mu\)</span>，其中，<span class="math inline">\(r\)</span>从<span class="math inline">\([0, 1, 2, ... 2^{k}-1]\)</span>里等概率地选择。</li>
+<li>CSMA/CD效率为（无碰撞传输时间所占的比例）：</li>
+</ul>
+<p><span class="math display">\[\frac{1}{1+5d_{prop}/d_{trans}}\]</span></p>
+<ul>
+<li><p>强化碰撞：碰撞后再发送48bit的人为干扰信号(jamming signal)，以便让所有用户都知道现在已经发生了碰撞。</p></li>
+<li>轮流协议：大家轮流用信道。
+<ul>
+<li>轮询协议：主节点邀请从节点轮流传输</li>
+<li>令牌传递协议：控制令牌依次通过各个结点，谁拿令牌谁使用</li>
+</ul></li>
+<li>MAC地址：6段48位。标识网络中的适配器。广播地址为ff-ff-ff-ff-ff-ff。</li>
+<li>CRC校验：给定生成多项式<span class="math inline">\(G\)</span>，要传输的二进制序列<span class="math inline">\(D\)</span>，求<span class="math inline">\(R\)</span>：
+<ul>
+<li><span class="math inline">\(D\)</span>后补<span class="math inline">\(r\)</span>个<span class="math inline">\(0\)</span>得到<span class="math inline">\(D&#39;\)</span>，<span class="math inline">\(r\)</span>是<span class="math inline">\(G\)</span>中<span class="math inline">\(x\)</span>的最高次的指数</li>
+<li><span class="math inline">\(D&#39;\div G\)</span>得到的余数<span class="math inline">\(R\)</span>即为校验码。注意，这里做的是<strong>模二除法</strong>。</li>
+</ul></li>
+<li>ARP:mac地址解析协议，根据目标的IP地址获取其MAC地址。通过主机内的ARP高速缓存实现，存储着<strong>局域网节点</strong>的IP/MAC地址映射：<span class="math inline">\(\left&lt; IP; MAC;TTL\right&gt;\)</span>，其中<span class="math inline">\(TTL\)</span>是存储生命周期。</li>
+<li>ARP过程：a想知道b的mac地址，则主机a发送ARP广播报文（目的ip是b的ip；目的mac是广播地址ff-ff-ff-ff-ff-ff），b回复arp响应报文，告知b的mac。</li>
+<li>跨子网时：通过路由器中继。 交换式以太网：星型结构。争用期为<span class="math inline">\(51.2\mu s\)</span>，最短有效字长为64字节。</li>
+<li>前同步码：以太网帧首部中的前8字节，用来“唤醒”对方的接受适配器，同步双方时钟。</li>
+<li>以太网不可靠、无连接：没有握手，没有ack</li>
+<li>随机回退：以太网传输中出现碰撞时，在重新传输之前，适配器要等待一段随机时间。</li>
+<li><p>10BaseT，100BaseT：10、100代表速率，T 代表双绞线（Twisted Pair）</p></li>
+<li>以太网限制节点和交换机之间的最大距离：因为使用CSMA/CD广播，为了保证碰撞检测效率。</li>
+<li>集线器（hub）：物理层的中继器。</li>
+<li>交换机：链路层的存储-转发设备。不转发同一网段的帧。一个接口对应一个网段。可以自学习转发表：收到帧时，自动将MAC地址：接口映射加入转发表。转发帧时，如果表中没有要找的目的MAC地址，则转发向所有输出端口。</li>
+<li><strong>二者区别：</strong>
+<ul>
+<li>集线器只是将网络的覆盖距离简单的延长，而且距离有限，具体实现在物理层；交换机不仅具有将LAN的覆盖距离延长的作用，而且理论上可做到无限延长，具体实现在MAC层。</li>
+<li>集线器仅具有简单的信号整形和放大的功能；交换机则属于一种智能互连设备，它主要提供信号的存储/转发、数据过滤、路由选择等能力。</li>
+<li>集线器仅是一种硬设备，而交换机既包括硬件又包括软件。</li>
+</ul></li>
+<li><p>点对点传输：交换机的每个端口都只连接一个MAC地址。此时不会发生碰撞，可以实现全双工。</p></li>
+<li>虚拟局域网：把一个物理交换机的端口分组，每个分组构成一个虚拟局域网。这些端口连接的主机只能在本VLAN内通信。</li>
+<li>跨物理局域网通信：如果两个主机属于一个vlan，但是不在同一个物理局域网内怎么办？将交换机上一个特殊端口设置为所有vlan共享（称为干线端口），并将其和目的局域网对应的交换机的干线端口相连。vlan1发来的数据通过干线端口转发到同一vlan的另一主机。</li>
+<li><p>为此，使用vlan时，需要在以太网帧上再加一个vlan-id</p></li>
+</ul>
+<h4 id="cp7.wireless-and-mobile-networks">cp7.Wireless and Mobile Networks</h4>
+<ul>
+<li>ad-hoc：无基础设施的无线网络，终端之间自组织。</li>
+<li>无线网络特点：比特差错更加频繁，信号强度衰减。</li>
+<li>CDMA：之前提过的，多用户共享信道，但是各自持有码片<span class="math inline">\(m\)</span>。在传输数据时，用<span class="math inline">\(m\)</span>来代表1，<span class="math inline">\(m\)</span>的反码代表0。用<span class="math inline">\(+1, -1\)</span>表示码片中的<span class="math inline">\(1, 0\)</span>，可以得到一个向量<span class="math inline">\(S\)</span>。要求各个用户的向量<span class="math inline">\(S\)</span>之间相互正交。</li>
+<li>判断数据哪些哪个用户：将收到的向量与该用户的<span class="math inline">\(S\)</span>求内积，得到正数说明该用户发送了<span class="math inline">\(1\)</span>，得到<span class="math inline">\(-1\)</span>说明该用户发送了<span class="math inline">\(0\)</span>，得到0说明该用户没发送。</li>
+<li>BSS：802.11的基本服务集，指的是一个基站和若干个移动站。（类比子网）所有的站在本 BSS 以内都可以直接通信</li>
+<li>BBA：一个BSS覆盖的地理范围。</li>
+<li>802.11协议簇：
+<ul>
+<li>802.11b：最高速率11 Mbps</li>
+<li>802.11a：最高速率54 Mbps</li>
+<li>802.11g：最高速率54 Mbps</li>
+</ul></li>
+<li>AP：BSS中的基站</li>
+<li>ESS：扩展的服务集。基本服务集通过接入点 AP连接到一个主干分配系统 DS (Distribution System)，然后再接入到另一个基本服务集构成</li>
+<li>DIFS：Distributed Inter-Frame Space，分布式帧间间隔</li>
+<li>SIFS：Short Inter-Frame Space，短帧帧间间隔</li>
+<li>CSMA/CA：802.11使用的碰撞避免算法（不是检测，是直接避免）：用户向ap发送一个很短的预约帧，用来预约信道，AP确认后，向BSS广播，赋予该用户信道使用权</li>
+<li>802.11帧格式：包含四个地址，源、目的、与AP相连的路由器接口的MAC、仅在ad hoc模式使用的地址。</li>
+</ul>
+<h3 id="令人混乱的数学指标大合集">令人混乱的数学指标大合集</h3>
+<ul>
+<li>带宽：单位<span class="math inline">\(bps\)</span>（比特每秒），表示传输速率。<span class="math inline">\(1mbps=10^3kbps=10^6bps\)</span></li>
+<li>时延：数据包到达路由后一次进行：
+<ul>
+<li>节点处理（差错、计算输出链路）</li>
+<li>排队（等待传输）</li>
+<li>传输（数据包从路由器发送到传播媒介上，类比包裹装车）</li>
+<li>传播（路上的时间）。 四个过程花费的时间就对应四种时延：<span class="math inline">\(d_{total}=d_{proc}+d_{queue}+q_{trans}+q_{prop}\)</span>。</li>
+</ul></li>
+<li>流量强度：针对一个节点（路由器）上时延的评估指标。假设<strong>输出链路</strong>带宽为R，分组长度为L，平均分组到达速率为a，则流量强度为<span class="math inline">\(L\times \frac{a}R\)</span>
+<ul>
+<li>理解：a表征数据进入的速度，R表征数据离开的速度</li>
+<li>流量强度趋近0时，即<span class="math inline">\(a\ll R\)</span>，排队时间几乎为0</li>
+<li>流量强度小于1时，即<span class="math inline">\(a&lt; R\)</span>，排队时间会不断变小</li>
+<li>流量强度趋近1时，即<span class="math inline">\(a= R\)</span>，排队时间几乎不变</li>
+<li>流量强度大于1时，即<span class="math inline">\(a&gt; R\)</span>，排队时间会不断变大</li>
+</ul></li>
+<li>吞吐量：<span class="math inline">\(\frac{发送方发送的比特速率}{接收方接受的比特速率}\)</span></li>
+<li>RTT：从发送包发第一个bit开始，到发送方收到ack为止的时间。即一个来回的时间。</li>
+<li>在TCP的超时间隔估计中，采样到新的数据后，估计顺序是：<span class="math inline">\(\text{EstimatedRTT} \rightarrow \text{DevRTT} \rightarrow \text{TimeoutInterval}\)</span></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    why
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/11/30/考完就不看の计网笔记！/" title="考完就不看の计网笔记！">git@github.com:creeper121386/Creeper121386.github.io.git/2018/11/30/考完就不看の计网笔记！/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/21/你需要知道的有关AI的一切/" rel="next" title="你需要知道的有关AI的一切">
+                <i class="fa fa-chevron-left"></i> 你需要知道的有关AI的一切
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/05/各种乱七八糟的记录/" rel="prev" title="各种乱七八糟的记录">
+                各种乱七八糟的记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzQ3NS8xNDAwNw=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4" alt="why">
+          <p class="site-author-name" itemprop="name">why</p>
+           
+              <p class="site-description motion-element" itemprop="description">中国武汉 华中科技大学 联创团队</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/category/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/creeper121386" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/5807408179/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:694029828@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.google.com.hk/" target="_blank" title="Google">
+                  
+                    <i class="fa fa-fw fa-google"></i>
+                  
+                    
+                      Google
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://unique-ailab.github.io/" title="UniqueAI" target="_blank">UniqueAI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hustunique.com/" title="联创团队" target="_blank">联创团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://luxiaoxiaodan.github.io/" title="华亭鹤唳" target="_blank">华亭鹤唳</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://jojo.fit/" title="yjxの博客" target="_blank">yjxの博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://moecode.com/" title="moecode" target="_blank">moecode</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://alexfan.cn/" title="AlexFan" target="_blank">AlexFan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://icegrave0391.github.io/" title="zcqの博客" target="_blank">zcqの博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#令人混乱的专有名词大集合"><span class="nav-number">1.</span> <span class="nav-text">令人混乱的专有名词大集合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cp.1-introduction"><span class="nav-number">1.1.</span> <span class="nav-text">cp.1 Introduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp.2-application-layer"><span class="nav-number">1.2.</span> <span class="nav-text">cp.2 Application Layer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp3.transport-layer"><span class="nav-number">1.3.</span> <span class="nav-text">cp3.Transport Layer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp4.networklayer"><span class="nav-number">1.4.</span> <span class="nav-text">cp4.NetworkLayer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp5.linklayer"><span class="nav-number">1.5.</span> <span class="nav-text">cp5.LinkLayer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp7.wireless-and-mobile-networks"><span class="nav-number">1.6.</span> <span class="nav-text">cp7.Wireless and Mobile Networks</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#令人混乱的数学指标大合集"><span class="nav-number">2.</span> <span class="nav-text">令人混乱的数学指标大合集</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">why</span>
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<script type="text/javascript" src="/js/src/click_why.js"></script>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>

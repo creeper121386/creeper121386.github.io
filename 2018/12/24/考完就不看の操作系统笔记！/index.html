@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en_US">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="https://me.idealli.com/images/load.gif" data-src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+<meta name="theme-color" content="#222">
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('这是一篇加密的文章...密码是多少呢OvO') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="Review  中断：特定事件发生后，先跳去执行中断处理程序，执行结束后返回断点 中断分类：机器断电是机器故障中断；敲键盘是IO中断；printf是访管中断 linux中断分上下部 unix：层次结构； 用户接口分类：系统功能调用，操作命令接口 Windows 启动方式：滚雪球式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考完就不看の操作系统笔记！">
+<meta property="og:url" content="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/24/考完就不看の操作系统笔记！/index.html">
+<meta property="og:site_name" content="WHYの小窝">
+<meta property="og:description" content="Review  中断：特定事件发生后，先跳去执行中断处理程序，执行结束后返回断点 中断分类：机器断电是机器故障中断；敲键盘是IO中断；printf是访管中断 linux中断分上下部 unix：层次结构； 用户接口分类：系统功能调用，操作命令接口 Windows 启动方式：滚雪球式">
+<meta property="og:locale" content="en_US">
+<meta property="og:updated_time" content="2020-03-15T02:09:15.721Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="考完就不看の操作系统笔记！">
+<meta name="twitter:description" content="Review  中断：特定事件发生后，先跳去执行中断处理程序，执行结束后返回断点 中断分类：机器断电是机器故障中断；敲键盘是IO中断；printf是访管中断 linux中断分上下部 unix：层次结构； 用户接口分类：系统功能调用，操作命令接口 Windows 启动方式：滚雪球式">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/24/考完就不看の操作系统笔记！/">
+
+
+
+
+
+  <title>考完就不看の操作系统笔记！ | WHYの小窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2db1eb18d81341c69d3326b3f812f6e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en_US">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+   
+    <a href="https://github.com/creeper121386" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WHYの小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">今天也是美好的一天呢！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://github.com/creeper121386" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/24/考完就不看の操作系统笔记！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="why">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WHYの小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">考完就不看の操作系统笔记！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T08:29:52+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="review">Review</h2>
+<ul>
+<li>中断：特定事件发生后，先跳去执行中断处理程序，执行结束后返回断点</li>
+<li>中断分类：机器断电是机器故障中断；敲键盘是IO中断；printf是访管中断</li>
+<li>linux中断分上下部</li>
+<li>unix：层次结构；</li>
+<li>用户接口分类：系统功能调用，操作命令接口</li>
+<li>Windows 启动方式：滚雪球式</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>（第四章开始每章必考）第四章至少两道，一道简单一道难（？）</li>
+<li>进程程序的最大区别：有无生命周期</li>
+<li>独占资源（互斥）一定有一个mutex信号灯</li>
+<li>死锁产生原因：系统资源不足，进程推进顺序非法</li>
+<li>写pv题：最后手动拿一个样例跑一炮</li>
+<li>移臂调度和电梯算法：同一个方向先做完再管另一个方向</li>
+<li>死锁4个必要条件：互斥、不剥夺、占有并等待、有环路</li>
+<li>死锁的避免：有序资源分配、银行家算法</li>
+<li>考试会挖的坑：<span class="math inline">\(p155,figure\; 5.9\)</span>弯道问题，<span class="math inline">\(5.10, 5.14\)</span>，银行家算法中加各种奇怪条件（比如加入资源到达时间的限制）</li>
+<li>上下界寄存器：针对的是物理地址；基址限长寄存器：针对逻辑地址</li>
+<li>缓冲调度重点看第一次有没有命中</li>
+<li>页面大小和块大小是一一对应的（一页里，装且只装一个块）</li>
+<li>设备无关性：用户使用的设备与物理设备无关（逻辑设备）</li>
+<li>缓冲：在两种不同速度的设之间平滑传输信息的技术</li>
+<li>linux和unix对设备的管理：当作文件</li>
+<li>三种文件：普通文件、目录文件、特殊文件（设备文件）</li>
+<li>第九章两道或以上答题</li>
+<li>文件后缀：标明文件属性</li>
+<li>文件的组织结构：逻辑结构、物理结构</li>
+<li>文件物理结构：连续（查找快，增加慢）、串联（查找慢，增加快）、索引（二者兼得）</li>
+<li>systemV索引结构：前十个是一级索引，一个二级索引，一个三级索引</li>
+<li>考试10道大题，两道pv，一道自己写一道填空。存储有缓冲区队列题（一定要画图）。文件系统有。考定义的简答题只有一道很简单。</li>
+<li>快表。</li>
+</ul>
+<h2 id="cp1.概论">Cp1.概论</h2>
+<ul>
+<li>单道程序设计技术：完全串行，无法分别处理不同任务。一个程序阻塞，其他程序也被阻塞。</li>
+<li>多道程序设计技术：多个程序之间（宏观上）并行，微观上串行。不同的程序使用不同的“道”，多道之间穿插地运行，一个程序阻塞，可以马上运行其他程序。</li>
+<li>多道运行特点：多道、微观并行、宏观串行</li>
+<li>分时技术：cpu时间划分为时间片，大家轮流用。</li>
+<li>实时处理：对外来信息能在其允许的deadline内做出反应。（反应快速）</li>
+<li>操作系统：一个大型的系统，负责软硬件资源分配，控制并发活动，提供用户接口。</li>
+<li>操作系统特征：并发、共享、不确定性（可以处理不确定的事件序列）</li>
+<li>总览：操作系统资源管理：
+<ul>
+<li>管cpu（先给谁用、谁用多久）：进程调度，处理机分派</li>
+<li>存储器管理（谁的东西该放在哪、占多少）：存储分配、存储无关性、存储保护、存储扩充（虚拟存储）</li>
+<li>设备管理：设备无关性、设备分配、设备传输控制</li>
+<li>文件系统：存取方法、文件共享、安全性、完整性、分配磁盘空间</li>
+</ul></li>
+<li>操作系统分类：
+<ul>
+<li>批量操作系统：将程序组织为作业，批量处理。</li>
+<li>分时操作系统：使用时间片轮转法。特点：并行性、独占性、交互性</li>
+<li>实时系统：可以进行实时处理。特点：可靠性、安全性、及时响应</li>
+<li>多处理机系统：并行系统，单机-&gt;集群（例如多核cpu）</li>
+<li>分布式系统：多个资源部件是分布的，经过通信网络相互作用。系统对资源进行全局的管理。</li>
+</ul></li>
+</ul>
+<h2 id="cp2.结构">Cp2.结构</h2>
+<ul>
+<li>操作系统虚拟机：裸机+操作系统程序</li>
+<li>指令系统：
+<ul>
+<li>裸机的指令系统只有机器指令；</li>
+<li>操作系统虚拟机的指令系统有操作命令（作业控制语言、键盘命令、图形化界面）和系统功能调用</li>
+</ul></li>
+<li>操作系统结构：
+<ul>
+<li>单体结构：一整块</li>
+<li>模块化结构</li>
+<li>可扩展结构</li>
+<li>层次结构</li>
+</ul></li>
+<li>unix结构：一层一层壳</li>
+<li>linux：一块块不同的模块</li>
+<li>windows：不同组件</li>
+<li>处理机の特权级：
+<ul>
+<li>管态：操作系统管理程序的特权级。可以使用全部指令、全部资源</li>
+<li>用户态：用户程序执行时的状态，不能使用特权指令，只允许访问自己的存储区域。</li>
+</ul></li>
+<li>中断：某个事件发生，系统暂停工作处理该事件，处理完毕后又继续回到断点执行。
+<ul>
+<li>IO中断</li>
+<li>外中断：例如命令行Ctrl-C</li>
+<li>故障中断：例如电源故障</li>
+<li>程序性中断：例如程序溢出、非法操作（0/1）</li>
+<li>访管中断：对操作系统提出某种需求发出的中断。</li>
+<li>按来源分类：中断（cpu外部中断）&amp;俘获（cpu内部中断）</li>
+</ul></li>
+<li>程序状态字（psw）：反映程序执行时机器所处的现行状态的代码。包括指令地址（pc），指令执行情况，cpu状态等。例如x86汇编中，psw包括CS, IP, flag.</li>
+<li>响应中断需要的硬件支持：指令计数器（pc），cpu状态寄存器，堆栈，中断矢量表</li>
+<li>中断响应的实质：pc，ps入栈，保存现场。</li>
+</ul>
+<h2 id="cp3.用户接口">Cp3.用户接口</h2>
+<ul>
+<li>操作系统的初启动：系统引导：将必要部分装入主存。</li>
+<li>引导方式分为：现场独立引导方式（滚雪球，例如Linux），下载方式（从别的机器下载主要文件）</li>
+<li>滚雪球步骤：加电/复位，bios启动，启动引导程序，内核初始化。</li>
+<li>应用程序的处理：编辑，编译，链接，运行</li>
+<li>链接类型：
+<ul>
+<li>静态（如果多个<strong>不同程序</strong>调用同一个库文件，会连接多次）：在编译时就把需要的额外代码直接一起放入可执行程序中，在发布时就不再需要依赖库。</li>
+<li>动态（只会链接一次）：编译时只向可执行文件放入库地址，在运行时才链接</li>
+</ul></li>
+<li>操作系统提供的用户界面：命令接口，程序接口</li>
+<li>不同的操作命令：
+<ul>
+<li>作业控制语言（JCL）：提供系统的作业控制</li>
+<li>键盘命令：命令行</li>
+<li>图形界面：ui</li>
+</ul></li>
+<li>系统功能调用：通过访管指令和访管中断实现。</li>
+</ul>
+<h2 id="cp4.-进程管理">Cp4. 进程管理</h2>
+<ul>
+<li>顺序程序：程序顺序执行。在单道系统中，无法实现并行。结果可再现。具有封闭性（即一旦开始运行，就不受外界影响）</li>
+<li>并发程序：可以实现宏观上的并行。一个程序尚未结束，也可以开始执行另一个程序。失去了封闭性和可再现性。</li>
+<li>进程和程序的区别：一静一动；进程是独立运行的活动单位；进程是竞争系统资源的基本单位；一个程序可以对应多进程，一个进程至少包含一个程序。</li>
+<li>进程的状态：运行；等待（被阻塞）；就绪（只待cpu）</li>
+<li>大量进程的组织：处于不同的状态的进程们分别属于不同的队列（例如运行队列，等待队列，就绪队列）</li>
+<li>进程的组成：程序＋数据＋PCB</li>
+<li>进程控制块（PCB）：包含pid，进程当前的状态，next指针（指向当前队列的下一个进程），进程优先级，cpu现场保护区，和别的进程的通信信息，家族关系，占有资源清单。</li>
+<li>资源争用：
+<ul>
+<li>互斥（临界）资源：同时仅允许一个进程使用。</li>
+<li>临界区：指的是某个进程中的一段代码，在该段代码中，该进程对临界变量进行了审查、修改操作。</li>
+<li>进程同步：不同进程之间传递消息。</li>
+<li>锁：0表示未🔒（可用），1表示已上🔒。</li>
+<li>信号灯：一个信号灯由二元组<code>&lt;s, q&gt;</code>组成。s是该灯当前的值，q值为试图获取该灯被阻塞的队列（没p到该信号灯的进程）。在pv操作中，若信号灯值&gt;0，表示可用的资源个数，&lt;0则其绝对值表示等待使用该资源的进程个数。</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>所谓的[原语]，其实指的是原子操作，即该操作不可被分割，不可被中断。</p>
+</blockquote>
+<ul>
+<li>生产者消费者问题：生产者生产资源（执行v操作，资源增加），p空位；消费者p资源，消费资源，取走资源后，v空位。</li>
+<li>因此需要两个信号灯，分别表示缓冲区中的空位数目和满位数目。</li>
+<li>同时需要设置锁，防止同读同写。</li>
+<li>对于多个生产者消费者的情况，上述模板仍然使用（只要没有啥奇奇怪怪的条件XD）</li>
+<li>进程通信（IPC）：
+<ul>
+<li>消息缓冲通信：使用约定的格式收发消息</li>
+<li>信箱：嗯这个大概不考8 我不复习了jojo！</li>
+</ul></li>
+<li>线程：共享分给父进程的内存，有自己私有的堆栈和cpu环境。</li>
+<li>用户线程＆内核线程：在用户空间中调用的线程。无需内核干预。内核线程：完全由os管理</li>
+<li>fork()：为新进程分配pcb，pid，增加与该进程关联的文件表和索引节点（也就是说，父进程已经打开的文件子进程也可继续使用）</li>
+<li>fork类型程序的打印顺序：考虑父子进程分别先后执行、以及穿插执行的情况。</li>
+<li>exec()：传入可执行文件名，执行该文件。实际上，是把当前进程的执行内容替换为了一个新进程。因此，<strong>exec()语句之后的语句不会被执行，执行完exec后直接返回。</strong></li>
+<li>等待进程/线程终止：
+<ul>
+<li>wait()，挂起当前进程，直到任意一个子进程返回。</li>
+<li>waitpid(pid, status)，挂起直到<strong>特定的</strong>子进程返回。</li>
+</ul></li>
+<li>进程调度＆分派：在众多就绪态的进程中，选择一个运行。</li>
+<li>调度是把一个新进程插入就绪队列的合适位置；分派是将程序从就绪队列移出并运行。</li>
+<li>调度策略：
+<ul>
+<li>先来先服务</li>
+<li>优先数调度：为每个进程分配优先数，根据该数字大小来决定优先级。</li>
+<li>循环轮转调度</li>
+</ul></li>
+</ul>
+<h2 id="cp5.-资源管理">Cp5. 资源管理</h2>
+<ul>
+<li>资源分配策略：资源选择请求者；请求者选择资源。</li>
+<li>常用策略：先到先请求；优先调度；移臂调度（电梯）；旋转调度（直接找最近）</li>
+<li>死锁原因：资源不足，进程推进顺序非法。</li>
+<li>产生的必要条件：资源互斥，进程之间不剥夺，部分分配（不会一次申请完），环路条件（存在依赖链）</li>
+<li>资源请求矩阵：每一行表示某一个进程需要的各个编号的资源的个数。</li>
+<li>资源分配矩阵：每一行表示某一个进程当前占有的各个编号的资源的个数。</li>
+<li>预防死锁：
+<ul>
+<li>静态分配；</li>
+<li>有序分配：为每个资源都编号，分配资源必须升序</li>
+<li>银行家算法：进程申报自己对各个资源的最大可能的需求量，系统看当前资源够不够，不够就拒绝。</li>
+</ul></li>
+</ul>
+<h2 id="cp.6-cpu调度">Cp.6 cpu调度</h2>
+<ul>
+<li>两级调度：宏观决定那些程序调入os，微观决定当前哪个进程占用cpu。</li>
+<li>批处理系统：有两层，以作业为调度单位，在决定了作业的基础上再调度进程</li>
+<li>分时操作系统：以进程为调度单位</li>
+<li>作业的状态：与进程类似，有提交状态（用户刚刚提交），后备状态（作业录入到后备存储设备），执行状态（调入内存），完成状态。</li>
+<li>作业调度使用的数据结构：作业控制块JCB，记录已经进入os的各个作业的状态。</li>
+<li>作业周转时间：作业的完成时间－提交时间。包含了排队时间。</li>
+<li>平均周转时间：各个作业的周转时间求平均。</li>
+<li>带权周转时间：周转时间/实际的运行时间。该值大于等于1。</li>
+<li>平均带权周转时间：各个带权周转时间求平均</li>
+<li>作业调度算法：先来先服务，短作业优先（总选当前耗时最短的来执行）；响应比高者优先（响应比为1+等待时间/运行时间）；优先数调度算法</li>
+<li>进程调度算法：
+<ul>
+<li>循环轮转（RR）：时间片q足够大时，等效为先到先服务调度。</li>
+</ul></li>
+<li>linux进程调度：动态优先数，且为可抢占式。</li>
+</ul>
+<h2 id="cp.7-主存管理">Cp.7 主存管理</h2>
+<ul>
+<li>主存管理的功能：地址映射（逻辑地址-&gt;物理地址）；为不同用户分配主存；存储保护；扩充虚拟主存。</li>
+<li>逻辑结构：
+<ul>
+<li>一维地址</li>
+<li>二维地址：段地址+偏移</li>
+</ul></li>
+<li>主存空间：物理地址的集合</li>
+<li>程序地址空间：逻辑地址的集合</li>
+<li>静态地址映射：程序装入主存时，即进行映射</li>
+<li>动态地址映射：运行时才映射（例如，通过给逻辑地址加上一个偏移量（段地址），该偏移量存储在重定位寄存器中）</li>
+<li>主存分配使用的数据结构：主存资源信息块(M_RIB)</li>
+<li>主存分配中涉及的策略：
+<ul>
+<li>分配（主存块选请求者）；</li>
+<li>放置（请求者选主存块）；</li>
+<li>调入策略（决定信息什么时候装入主存）；</li>
+<li>淘汰（主存满时，淘汰哪些信息）</li>
+</ul></li>
+<li>虚拟存储器：swap分区。需要提供地址变换机构（用来映射地址）</li>
+<li>存储保护：保证各个用户程序只能在给定的区域内活动。
+<ul>
+<li>上下界保护：分别用上下界寄存器存储当前程序的上下界，越界会发生中断。</li>
+<li>基地址限长保护：使用基址寄存器＋限长寄存器保护</li>
+</ul></li>
+<li>存储分区：使用主存资源信息块＋分区描述器＋空闲区队列来管理，负责分配当前程序使用哪一块主存。</li>
+<li>空闲区队列结构：一个链表，首指针是第一块空闲区首地址，之后每一个节点表示一块空闲区，有三个成员：flag（始终为0，表示空闲），分区大小，next指针</li>
+<li>放置策略：
+<ul>
+<li>首次匹配：尽量选低地址的</li>
+<li>最佳匹配：尽量选最接近大小的</li>
+<li>最坏匹配：尽量选最大的（与程序大小差距最大的）</li>
+</ul></li>
+<li>碎片拼接：把多个零散的小空闲区拼起来。</li>
+<li>页面（虚页）：<strong>程序地址空间</strong>-&gt;一个个<strong>大小相等</strong>的页面/虚页</li>
+<li>主存块（实页）：主存等分得到。</li>
+<li>主存中的实页和程序空间中的虚页具有映射关系。该映射关系通过页面存储。每个程序有自己的页表。</li>
+<li>相联存储器（联想存储器）：cache；</li>
+<li>快表：在cache中存放正在运行的进程使用到的页表，因为很快所以叫做快表。起名鬼才.jpg</li>
+<li>使用关联存储器时的映射过程：
+<ul>
+<li>获得逻辑地址后，首先提取出页号、偏移</li>
+<li>使用页号去联想存储器中查询，如果命中则直接获得物理空间中该页对应的主存块；</li>
+<li>未命中时，再去主存中的页表查询。</li>
+</ul></li>
+<li>请求型页式机制：装入一个程序的一部分页面即可运行。</li>
+<li>扩充页表：再增设一个中断位（0表示该页在主存），一个辅存地址（表示该页在辅存中的位置）</li>
+<li>缺页处理：即查询页表时，发现要查的页中断位＝1（不在主存），此时发生缺页中断。此时说明要访问的页不在主存，在辅存中，需要将其调入主存。如果主存有空闲位置，则直接调入，否则需要淘汰<strong>当前程序</strong>在主存中存在的其他页。</li>
+<li>再次扩充页表：增设引用位（表示该页最近是否有被访问过），和改变位（该页是否被修改）</li>
+<li>淘汰（置换）算法：
+<ul>
+<li>最佳算法：淘汰在最长的时间之后才会用到的页（或者最好永远不会再用到）</li>
+<li>先进先出：选择最早进入主存的页（需要记录各个页进入主存的顺序）</li>
+<li>LRU（最久未使用）：就组原里那个，完 全 一 致。软件实现可以使用一个栈，每访问一页，则调整栈中各个页号的次序。</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>需要注意，页式存储地址仍然是一维的。</p>
+</blockquote>
+<ul>
+<li>段式存储：一个分段是一片连续区域（段大小未必都相等）。</li>
+<li>段式地址映射机构：每一项需要记录段号、段长和基址</li>
+<li>段页存储：地址是二维的，一个段中有多个页。</li>
+<li>段表：每一项存储段号、页表的长度和页表基址。</li>
+</ul>
+<h2 id="cp.8-设备管理">Cp.8 设备管理</h2>
+<ul>
+<li>分类：存储设备，io设备，通信设备</li>
+<li>设备管理目标：提高利用率，方便用户使用。</li>
+<li>统一性：为各种不同设备提供一致的界面</li>
+<li>独立性：逻辑设备与物理设备无关</li>
+<li>设备管理的功能：状态跟踪，设备分配与回收，设备控制</li>
+<li>设备独立性实现：使用高级语言中的软通道实现；批处理系统中联接语句实现；指派命令实现</li>
+<li>总之，实现方法就是把一个变量/逻辑结构和实际的设备关联</li>
+<li>设备独立性优点：方便用户，提高利用率，提高可扩展性。</li>
+<li>管理设备使用的数据结构：设备控制块DCB。</li>
+<li>缓冲：用来暂时存放io数据的区域。</li>
+<li>引入缓冲的原因：生产、消费者速度有差异；传输数据速度不一致；可以用来实现应用程序的拷贝</li>
+<li>进程请求读取键盘输入的过程：
+<ul>
+<li>进程从os获得一个空buffer</li>
+<li>键盘输入的内容-&gt;buffer</li>
+<li>用户请求时，os将buffer内容提出，发送到用户进程存储区</li>
+<li>若buffer空，进程还在请求，这该进程挂起，等待输入。</li>
+</ul></li>
+<li>进程请求写内容到输出设备：
+<ul>
+<li>进程获得空buffer</li>
+<li>进程向buffer写入</li>
+<li>缓冲区满时，os才将其内容写入输出设备</li>
+<li>若缓冲区已满，且进程仍想继续输出，则进程挂起。</li>
+</ul></li>
+<li>常用缓冲：
+<ul>
+<li>双缓冲：生产者先向buf1填满内容，然后消费者取buf1的时候，生产者填buf2，如此循环。</li>
+</ul></li>
+<li>设备分配：
+<ul>
+<li>独享分配：一个作业执行时独占该设备</li>
+<li>共享分配：多个作业、进程共同使用</li>
+<li>虚拟分配：在一类物理设备上模拟另一类物理设备，可以把独占设备转换为共享设备。</li>
+</ul></li>
+<li>spoooling系统：一种把独占物理设备变成多个虚拟设备的手段，提供外围设备同时联机操作。
+<ul>
+<li>例如用户请求使用正在被占用的打印机，spooling系统仍会同意打印请求，然后再输出井中为其创建buffer，并将待打印内容填入其中，排队等待打印（缓输出） -对于输入设备，spooling系统则将其输入内容放入输入井，使其可被多个程序共享。</li>
+</ul></li>
+<li>io控制方式：
+<ul>
+<li>循环测试io方式</li>
+<li>io中断方式</li>
+<li>通道方式</li>
+<li>dma方式</li>
+</ul></li>
+<li>io子系统：用来实施对设备的控制和操作，通过设备处理程序直接控制设备</li>
+<li>控制io核心模块的方式：
+<ul>
+<li>为每个设备设置设备处理进程，io请求到来时该进程启动，无请求则睡眠。</li>
+<li>把设备作为文件</li>
+</ul></li>
+<li>执行io过程的步骤：
+<ul>
+<li>逻辑设备名-&gt;物理设备名</li>
+<li>检查io合法性</li>
+<li>形成io请求块，并将其加入对应的设备请求队列</li>
+</ul></li>
+</ul>
+<h2 id="cp.9">Cp.9</h2>
+<ul>
+<li>文件：逻辑上具有完整意义的信息的集合。由信息项和记录组成。</li>
+<li>文件系统：负责管理、存取文件的软件机构</li>
+<li>功能：实现了按名存取。</li>
+<li>特点：使用简单，安全，既共享又保密</li>
+<li>文件的结构：
+<ul>
+<li>逻辑记录：按照逻辑含义划分的信息单位</li>
+<li>物理记录：在存储介质上的存放。</li>
+</ul></li>
+<li>逻辑结构（文件组织）：
+<ul>
+<li>流式文件：无结构的，按照特殊字符为界或者按照信息个数存取。unix中所有文件都是流式文件。</li>
+<li>记录式：结构化的。一个文件有若干记录组成。
+<ul>
+<li>定长记录：每个记录长度相等</li>
+<li>变长记录：不定长。</li>
+</ul></li>
+</ul></li>
+<li>存取方式：顺序方式，随机存取</li>
+<li>物理结构：
+<ul>
+<li>连续文件：连续存储。目录项需要：文件名、文件大小、首地址。连续存取快，不易增删。</li>
+<li>串联文件：存在若干分散的块中，每块最末是下一块指针。目录项需要：文件名、首地址。易于增删。</li>
+<li>索引文件：仍然分散存储，但是这次建立索引表来指示每一块的地址（类比页表）。目录项只需要文件名和索引表地址。易于增删，可以读写任意记录。索引表中的表项存放逻辑块号和磁盘块号。</li>
+</ul></li>
+<li>多级索引：上一级索引表中不存实际数据的磁盘块地址，而是下一级索引表地址。</li>
+<li>文件目录：存放文件名、文件逻辑结构、文件物理结构（上面提到的内容）、权限、文件类型等。</li>
+<li>文件目录分类：
+<ul>
+<li>一级文件目录：将所有文件都放到一张表。不允许文件同名。</li>
+<li>树形文件目录：目录内容可以是另一个目录，或者一个文件。</li>
+</ul></li>
+<li>文件链接🔗：一个文件目录中的文件指针直接指向源文件的<strong>目录表项</strong>（注意是指向它对应的目录表现，不是指向文件对应的磁盘块）
+<ul>
+<li>硬链接：一个文件的多个硬链接共享一个inode号（相当于都是一个文件的不同别名）。删除一个硬链接不影响对应磁盘块中的内容，因为还有别的硬链接指向它。</li>
+<li>软链接：是一个另外的文件（inode号与指向的文件不同），只不过是在对其进行操作时，os自动将其路径修改为源文件的路径。</li>
+</ul></li>
+<li>unix文件分类：普通文件、目录文件、特殊文件（设备）</li>
+<li>第七版unix索引结构：一共8个指针：
+<ul>
+<li>小文件全是直接索引</li>
+<li>大文件全是一级索引</li>
+<li>超大文件最后一个指针是二级索引，其他还都是一级索引。</li>
+</ul></li>
+<li>systemv文件索引结构：设磁盘块大小为<span class="math inline">\(a\)</span>，则0~9指针直接指向磁盘块（<span class="math inline">\(10a\)</span>），10号指针是一级索引(<span class="math inline">\(256\times a\)</span>)，11号是二级索引（<span class="math inline">\(256^2\times a\)</span>），12号是三级索引（<span class="math inline">\(256^3\times a\)</span>）</li>
+</ul>
+<h2 id="要看的0w0">要看的0w0</h2>
+<ul>
+<li>进程状态图（等待、就绪啥的），或者问其中的因果变迁；pv题；银行家算法题目；作业调度算法； <!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ4ODY3NjAyMywtMTc2ODQzODExMywxNT
+UwOTI5MjYzLC00OTA1NzMzODcsMTM0ODMxOTc3NSwtMzEwOTcy
+NTI4LDE3MTgzNjkxMzAsNDc5MDk1MDI4LDE1Mzc5MTE3MzIsMz
+U1OTM1Mzk2LDk4MDI2NjU0MCwzMTE0MTUzNzYsLTE1NTQ0ODgy
+NDcsLTIwMjc3MDUwODYsLTU0Mzk2OTc0NiwxNjg2ODQyODE1LC
+0xNjE2MDg0MTIsLTE0MDgxODIzNCwtODQ3NzAzOTA2LC0xOTg0
+NjQyMDA0XX0=
+--></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    why
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/24/考完就不看の操作系统笔记！/" title="考完就不看の操作系统笔记！">git@github.com:creeper121386/Creeper121386.github.io.git/2018/12/24/考完就不看の操作系统笔记！/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/08/考完就不看の离散数学笔记！/" rel="next" title="考完就不看の离散数学笔记！">
+                <i class="fa fa-chevron-left"></i> 考完就不看の离散数学笔记！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/18/why家今天的饭！/" rel="prev" title="why家今天的饭！">
+                why家今天的饭！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzQ3NS8xNDAwNw=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars2.githubusercontent.com/u/32115448?s=460&v=4" alt="why">
+          <p class="site-author-name" itemprop="name">why</p>
+           
+              <p class="site-description motion-element" itemprop="description">中国武汉 华中科技大学 联创团队</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/category/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/creeper121386" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/5807408179/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:694029828@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.google.com.hk/" target="_blank" title="Google">
+                  
+                    <i class="fa fa-fw fa-google"></i>
+                  
+                    
+                      Google
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://unique-ailab.github.io/" title="UniqueAI" target="_blank">UniqueAI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hustunique.com/" title="联创团队" target="_blank">联创团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://luxiaoxiaodan.github.io/" title="华亭鹤唳" target="_blank">华亭鹤唳</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://jojo.fit/" title="yjxの博客" target="_blank">yjxの博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://moecode.com/" title="moecode" target="_blank">moecode</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://alexfan.cn/" title="AlexFan" target="_blank">AlexFan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://icegrave0391.github.io/" title="zcqの博客" target="_blank">zcqの博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#review"><span class="nav-number">1.</span> <span class="nav-text">Review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp1.概论"><span class="nav-number">2.</span> <span class="nav-text">Cp1.概论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp2.结构"><span class="nav-number">3.</span> <span class="nav-text">Cp2.结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp3.用户接口"><span class="nav-number">4.</span> <span class="nav-text">Cp3.用户接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp4.-进程管理"><span class="nav-number">5.</span> <span class="nav-text">Cp4. 进程管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp5.-资源管理"><span class="nav-number">6.</span> <span class="nav-text">Cp5. 资源管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp.6-cpu调度"><span class="nav-number">7.</span> <span class="nav-text">Cp.6 cpu调度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp.7-主存管理"><span class="nav-number">8.</span> <span class="nav-text">Cp.7 主存管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp.8-设备管理"><span class="nav-number">9.</span> <span class="nav-text">Cp.8 设备管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp.9"><span class="nav-number">10.</span> <span class="nav-text">Cp.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要看的0w0"><span class="nav-number">11.</span> <span class="nav-text">要看的0w0</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">why</span>
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<script type="text/javascript" src="/js/src/click_why.js"></script>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
